@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Onest } from "next/font/google";
 
 import "./globals.css";
+import { Header1 } from "@/components/ui/header";
+import { Footer } from "@/components/ui/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,15 +17,16 @@ const geistMono = Geist_Mono({
 });
 
 const onest = Onest({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'], // pick the weights you need
-  display: 'swap',
-  variable: '--font-onest',
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // pick the weights you need
+  display: "swap",
+  variable: "--font-onest",
 });
 
 export const metadata: Metadata = {
   title: "Summer Kallunki | Utah Makeup Artist",
-  description: "Summer Kallunki is a Utah-based makeup artist specializing in bridal, special events, and photoshoots.",
+  description:
+    "Summer Kallunki is a Utah-based makeup artist specializing in bridal, special events, and photoshoots.",
 };
 
 export default function RootLayout({
@@ -33,10 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={onest.className}>
-      <body
-        className={`${onest.variable} antialiased`}
-      >
+      <body className={`${onest.variable} antialiased`}>
+        <Header1 />
         {children}
+        <Footer />
       </body>
     </html>
   );

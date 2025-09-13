@@ -1,173 +1,131 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Menu, MoveRight, X } from "lucide-react";
-import { useState } from "react";
-import { Luckiest_Guy, Onest } from "next/font/google";
+import { useState, useEffect } from "react";
+import { Montserrat } from "next/font/google";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { Star, Camera, User, Mail } from "lucide-react";
+import { usePathname } from "next/navigation";
 
-const luckiest = Luckiest_Guy({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
   display: "swap",
-});
-
-const onest = Onest({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'], // pick the weights you need
-  display: 'swap',
-  variable: '--font-onest',
 });
 
 function Header1() {
   const navigationItems = [
-    {
-      title: "Home",
-      href: "/",
-      description: "",
-    },
-    {
-      title: "Portfolio",
-      href: "/",
-      description: "",
-    },
-    {
-      title: "Services",
-      description: "Let's find the right makeup for you",
-      items: [
-        {
-          title: "Events",
-          href: "/reports",
-        },
-        {
-          title: "Bridal",
-          href: "/statistics",
-        },
-        {
-          title: "Editorial",
-          href: "/dashboards",
-        },
-        {
-          title: "Beauty",
-          href: "/recordings",
-        },
-      ],
-    },
+    { title: "Services", href: "/services", Icon: Star },
+    { title: "Portfolio", href: "/portfolio", Icon: Camera },
+    { title: "About Me", href: "/about", Icon: User },
+    { title: "Contact", href: "/contact", Icon: Mail },
   ];
 
+  const leftItems = navigationItems.slice(0, 2);
+  const rightItems = navigationItems.slice(2);
+
   const [isOpen, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname(); // get current route
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Determine text color: white on home, red elsewhere (when not scrolled)
+  const defaultTextColor =
+    pathname === "/" ? "text-white" : "text-black";
+
   return (
-    <header className="w-full z-40 fixed top-0 left-0 bg-background">
-      <div className={`container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center ${onest.className}`}>
-        <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
-          <NavigationMenu className="flex justify-start items-start">
-            <NavigationMenuList className="flex justify-start gap-4 flex-row">
-              {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
-                  {item.href ? (
-                    <>
-                      <NavigationMenuLink>
-                        <Button variant="ghost">{item.title}</Button>
-                      </NavigationMenuLink>
-                    </>
-                  ) : (
-                    <>
-                      <NavigationMenuTrigger className="font-medium text-sm">
-                        {item.title}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent className="!w-[450px] p-4">
-                        <div className="flex flex-col lg:grid grid-cols-2 gap-4">
-                          <div className="flex flex-col h-full justify-between">
-                            <div className="flex flex-col">
-                              <p className="text-base">{item.title}</p>
-                              <p className="text-muted-foreground text-sm">
-                                {item.description}
-                              </p>
-                            </div>
-                            <Button size="sm" className="mt-10">
-                              See All
-                            </Button>
-                          </div>
-                          <div className="flex flex-col text-sm h-full justify-end">
-                            {item.items?.map((subItem) => (
-                              <NavigationMenuLink
-                                href={subItem.href}
-                                key={subItem.title}
-                                className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4 rounded"
-                              >
-                                <span>{subItem.title}</span>
-                                <MoveRight className="w-4 h-4 text-muted-foreground" />
-                              </NavigationMenuLink>
-                            ))}
-                          </div>
-                        </div>
-                      </NavigationMenuContent>
-                    </>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+    <header
+      className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${
+        scrolled ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
+      }`}
+    >
+      <div
+        className={`flex items-center justify-between min-h-20 px-6 ${montserrat.className}`}
+      >
+        {/* Left nav */}
+        <div className="hidden lg:flex items-center gap-6">
+          {leftItems.map(({ title, href, Icon }) => (
+            <Link
+              key={title}
+              href={href}
+              className={`flex items-center gap-2 transition-colors duration-300 font-bold uppercase ${
+                scrolled ? "text-gray-800 hover:text-red-700" : defaultTextColor
+              }`}
+            >
+              <Icon size={18} /> {title.toUpperCase()}
+            </Link>
+          ))}
         </div>
-        <div className="flex lg:justify-center">
-          <p className={`font-semibold text-red-700 text-4xl ${luckiest.className}`}>
-            SummerKMakeup
-          </p>
+
+        {/* Logo */}
+        <div className="flex justify-center flex-1">
+          <Link href="/" className="no-underline">
+            <p
+              className={`text-4xl font-bold italic cursor-pointer transition-colors duration-300 ${
+                scrolled
+                  ? "text-[#FF99BD]"
+                  : pathname === "/"
+                  ? "text-white"
+                  : "text-red-600"
+              }`}
+            >
+              summer k makeup.
+            </p>
+          </Link>
         </div>
-        <div className="flex justify-end w-full gap-4">
-          <Button variant="ghost" className="hidden md:inline">
-            Contact Inquiry
-          </Button>
-          <div className="border-r hidden md:inline"></div>
+
+        {/* Right nav */}
+        <div className="hidden lg:flex items-center gap-6">
+          {rightItems.map(({ title, href, Icon }) => (
+            <Link
+              key={title}
+              href={href}
+              className={`flex items-center gap-2 transition-colors duration-300 font-bold uppercase ${
+                scrolled ? "text-gray-800 hover:text-red-700" : defaultTextColor
+              }`}
+            >
+              <Icon size={18} /> {title.toUpperCase()}
+            </Link>
+          ))}
         </div>
-        <div className="flex w-12 shrink lg:hidden items-end justify-end">
+
+        {/* Mobile hamburger */}
+        <div className="lg:hidden">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? (
+              <X
+                className={`w-6 h-6 ${scrolled ? "text-gray-800" : defaultTextColor}`}
+              />
+            ) : (
+              <Menu
+                className={`w-6 h-6 ${scrolled ? "text-gray-800" : defaultTextColor}`}
+              />
+            )}
           </Button>
-          {isOpen && (
-            <div className="absolute top-20 border-t flex flex-col w-full right-0 bg-background shadow-lg py-4 container gap-8">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
-                  <div className="flex flex-col gap-2">
-                    {item.href ? (
-                      <Link
-                        href={item.href}
-                        className="flex justify-between items-center"
-                      >
-                        <span className="text-lg">{item.title}</span>
-                        <MoveRight className="w-4 h-4 stroke-1 text-muted-foreground" />
-                      </Link>
-                    ) : (
-                      <p className="text-lg">{item.title}</p>
-                    )}
-                    {item.items &&
-                      item.items.map((subItem) => (
-                        <Link
-                          key={subItem.title}
-                          href={subItem.href}
-                          className="flex justify-between items-center"
-                        >
-                          <span className="text-muted-foreground">
-                            {subItem.title}
-                          </span>
-                          <MoveRight className="w-4 h-4 stroke-1" />
-                        </Link>
-                      ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col gap-2 py-6 z-50">
+          {navigationItems.map(({ title, href, Icon }) => (
+            <Link
+              key={title}
+              href={href}
+              className="flex flex-row items-center gap-2 justify-center text-lg text-gray-800 hover:text-red-700 cursor-pointer transition-colors duration-300 font-bold uppercase"
+              onClick={() => setOpen(false)}
+            >
+              <Icon size={22} /> {title.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

@@ -41,6 +41,16 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-diced-hero-section-button-hover-fg: var(----diced-hero-section-button-hover-fg);
+  --color-diced-hero-section-button-hover-bg: var(----diced-hero-section-button-hover-bg);
+  --color-diced-hero-section-button-fg: var(----diced-hero-section-button-fg);
+  --color-diced-hero-section-button-bg: var(----diced-hero-section-button-bg);
+  --color-diced-hero-section-sub-text: var(----diced-hero-section-sub-text);
+  --color-diced-hero-section-separator: var(----diced-hero-section-separator);
+  --color-diced-hero-section-main-gradient-foreground: var(----diced-hero-section-main-gradient-foreground);
+  --color-diced-hero-section-main-gradient-to: var(----diced-hero-section-main-gradient-to);
+  --color-diced-hero-section-main-gradient-from: var(----diced-hero-section-main-gradient-from);
+  --color-diced-hero-section-top-text: var(----diced-hero-section-top-text);
 }
 
 :root {
@@ -76,6 +86,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --diced-hero-section-top-text: #2c3e50;
+  --diced-hero-section-main-gradient-from: #16a085;
+  --diced-hero-section-main-gradient-to: #2980b9;
+  --diced-hero-section-main-gradient-foreground: #16a085;
+  --diced-hero-section-separator: #005baa;
+  --diced-hero-section-sub-text: #34495e;
+  --diced-hero-section-button-bg: #27ae60;
+  --diced-hero-section-button-fg: #ffffff;
+  --diced-hero-section-button-hover-bg: #2ecc71;
+  --diced-hero-section-button-hover-fg: #fff;
 }
 
 .dark {
@@ -110,6 +130,16 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --diced-hero-section-top-text: #f7f7ff;
+  --diced-hero-section-main-gradient-from: #9F4EFF;
+  --diced-hero-section-main-gradient-to: #00A6FB;
+  --diced-hero-section-main-gradient-foreground: #9F4EFF;
+  --diced-hero-section-separator: #086CA2;
+  --diced-hero-section-sub-text: #f7f7ff;
+  --diced-hero-section-button-bg: #00A6FB;
+  --diced-hero-section-button-fg: #0A0A0A;
+  --diced-hero-section-button-hover-bg: #9F4EFF;
+  --diced-hero-section-button-hover-fg: #FFFFFF;
 }
 
 @layer base {
@@ -119,4 +149,41 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px white;
+  opacity: 0;
+  animation: sparkle-twinkle 1.5s infinite ease-in-out;
+  animation-delay: calc(var(--i) * 0.5s); /* optional, for stagger */
+}
+
+@keyframes sparkle-twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+
+.pinkButton {
+  background-color: "#fb447c"
 }

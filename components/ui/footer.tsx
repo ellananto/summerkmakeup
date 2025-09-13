@@ -1,108 +1,79 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Luckiest_Guy } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { useEffect, useState } from "react";
 
-
-const luckiest = Luckiest_Guy({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "800"],
   display: "swap",
 });
 
-interface FooterProps {
-  logo: React.ReactNode
-  brandName: string
-  socialLinks: Array<{
-    icon: React.ReactNode
-    href: string
-    label: string
-  }>
-  mainLinks: Array<{
-    href: string
-    label: string
-  }>
-  legalLinks: Array<{
-    href: string
-    label: string
-  }>
-  copyright: {
-    text: string
-    license?: string
-  }
-}
-
-export function Footer({
-  logo,
-  brandName,
-  socialLinks,
-  mainLinks,
-  legalLinks,
-  copyright,
-}: FooterProps) {
+export function Footer() {
   return (
-    <footer className="pb-6 pt-16 lg:pb-8 lg:pt-24">
-      <div className="px-4 lg:px-8">
-        <div className="md:flex md:items-start md:justify-between">
-          <Link
-            href="/"
-            className="flex items-center gap-x-2"
-            aria-label={brandName}
+    <div className="pt-20 lg:pt-24">
+      <footer className="relative" style={{ backgroundColor: "#FFADCA" }}>
+        {/* Full-width Wave SVG on top */}
+        <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg
+            className="w-full h-32"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
           >
-            {logo}
-            <span className={`font-semibold text-red-600 text-xl ${luckiest.className}`}>{brandName}</span>
-          </Link>
-          <ul className="flex list-none mt-6 md:mt-0 space-x-3">
-            {socialLinks.map((link, i) => (
-              <li key={i}>
-                <Button
-                  variant="secondary"
-                  size="icon"
-                  className="h-10 w-10 rounded-full"
-                  asChild
-                >
-                  <a href={link.href} target="_blank" aria-label={link.label}>
-                    {link.icon}
-                  </a>
-                </Button>
-              </li>
-            ))}
-          </ul>
+            <path
+              fill="white"
+              fillOpacity="1"
+              d="M0,64L48,90.7C96,117,192,171,288,192C384,213,480,203,576,186.7C672,171,768,149,864,160C960,171,1056,213,1152,224C1248,235,1344,213,1392,202.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
         </div>
-        <div className="border-t mt-6 pt-6 md:mt-4 md:pt-8 lg:grid lg:grid-cols-10">
-          <nav className="lg:mt-0 lg:col-[4/11]">
-            <ul className="list-none flex flex-wrap -my-1 -mx-2 lg:justify-end">
-              {mainLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-2 shrink-0">
-                  <a
-                    href={link.href}
-                    className="text-sm text-primary underline-offset-4 hover:underline"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="mt-6 lg:mt-0 lg:col-[4/11]">
-            <ul className="list-none flex flex-wrap -my-1 -mx-3 lg:justify-end">
-              {legalLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-3 shrink-0">
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+
+        {/* Footer content */}
+        <div
+          className={`relative z-10 px-8 pt-40 pb-10 text-gray-800 {montserrat.className}`}
+        >
+          <div className="grid grid-cols-2 pb-10">
+            <div></div>
+            <div className="grid grid-cols-3 gap-8">
+              <div className="text-center">
+                <h3 className="font-bold mb-2">Navigation</h3>
+                <ul>
+                  <Link href="/"><li>Home</li></Link>
+                  <Link href="/services"><li>Services</li></Link>
+                  <Link href="/portfolio"><li>Portfolio</li></Link>
+                  <Link href="/about"><li>About</li></Link>
+                  <Link href="/contact"><li>Contact</li></Link>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">Socials</h3>
+                <ul>
+                  <Link href="https://www.instagram.com/summerkmakeup/" ><li>Instagram</li></Link>
+                  <Link href="https://www.facebook.com/summerkmakeup"><li>Facebook</li></Link>
+                  <Link href="https://www.tiktok.com/@summerkmakeup"><li>Tik Tok</li></Link>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">Privacy</h3>
+                <ul>
+                  <li>Privacy Policy</li>
+                  <li>© 2025 SummerKMakeup</li>
+                  <li>All rights reserved.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="mt-6 text-sm leading-6 text-muted-foreground whitespace-nowrap lg:mt-0 lg:row-[1/3] lg:col-[1/4]">
-            <div>{copyright.text}</div>
-            {copyright.license && <Link href="https://www.linkedin.com/in/ella-nanto/" target="_blank">Website Created by Ella Nanto</Link>}
+          <div className="flex justify-center pb-15">
+            <h1
+              className={`text-8xl text-white font-bold italic {montserrat.className}`}
+            >
+              summer k makeup.
+            </h1>
           </div>
         </div>
-      </div>
-    </footer>
-  )
+      </footer>
+    </div>
+  );
 }
