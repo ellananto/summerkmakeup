@@ -17,7 +17,7 @@ function MeetSummer() {
       {/* Left image */}
       <div className="flex-shrink-0">
         <Image
-          src="/images/meet.jpg"
+          src="/images/meet.JPG"
           alt="Summer Left"
           width={450}
           height={650}
@@ -51,7 +51,7 @@ function MeetSummer() {
       {/* Right image */}
       <div className="flex-shrink-0">
         <Image
-          src="/images/meet-right.jpg"
+          src="/images/meet-right.JPG"
           alt="Summer Right"
           width={450}
           height={650}

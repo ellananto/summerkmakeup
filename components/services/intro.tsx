@@ -51,7 +51,7 @@ function Intro() {
       {/* Right image */}
       <div className="flex-shrink-0">
         <Image
-          src="/images/meet-right.jpg"
+          src="/images/meet-right.JPG"
           alt="Summer Right"
           width={450}
           height={650}
