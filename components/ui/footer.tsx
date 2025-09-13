@@ -1,8 +1,6 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Montserrat } from "next/font/google";
-import { useEffect, useState } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -32,11 +30,11 @@ export function Footer() {
 
         {/* Footer content */}
         <div
-          className={`relative z-10 px-8 pt-40 pb-10 text-gray-800 {montserrat.className}`}
+          className={`relative z-10 px-8 pt-40 pb-10 text-gray-800`}
         >
           <div className="grid grid-cols-2 pb-10">
             <div></div>
-            <div className="grid grid-cols-3 gap-8">
+            <div className={`grid grid-cols-3 gap-8 ${montserrat.className}`}>
               <div className="text-center">
                 <h3 className="font-bold mb-2">Navigation</h3>
                 <ul>

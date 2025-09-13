@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Onest } from "next/font/google";
-
-import "./globals.css";
 import { Header1 } from "@/components/ui/header";
 import { Footer } from "@/components/ui/footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "./globals.css";
 
 const onest = Onest({
   subsets: ["latin"],

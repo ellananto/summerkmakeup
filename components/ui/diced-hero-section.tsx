@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChronicleButton } from './chronicle-button';
+import Image from "next/image";
 
 interface TextStyle {
   color?: string;
@@ -258,7 +259,7 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
                 borderRadius: '20px',
               }}
             >
-              <img
+              <Image
                 src={slide.image}
                 alt={slide.title}
                 className={`warped-image ${
