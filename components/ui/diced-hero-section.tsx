@@ -19,10 +19,12 @@ interface ButtonStyle {
 interface SlideContent {
   title: string;
   image: string;
+  width: number;
+  height?: number;
 }
 interface DicedHeroSectionProps {
   topText: string;
-  mainText: React.ReactNode;
+  mainText: string;
   subMainText: string;
   buttonText: string;
   slides: SlideContent[];
@@ -40,6 +42,7 @@ interface DicedHeroSectionProps {
   mobileBreakpoint?: number;
   fontFamily?: string;
   isRTL?: boolean;
+  children?: React.ReactNode;
 }
 
 export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
@@ -220,7 +223,6 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
             hoverColor={buttonStyle?.hoverColor}
             hoverForeground={buttonStyle?.hoverForeground ?? '#fff'} // NEW
             borderRadius={buttonStyle?.borderRadius}
-            fontFamily={fontFamily}
             customBackground={buttonStyle?.backgroundColor}
             customForeground={buttonStyle?.color}
           />
@@ -276,6 +278,8 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
                   objectFit: 'cover',
                   cursor: 'pointer',
                 }}
+                width={slide.width}
+                height={slide.height || slide.width}
                 onClick={() => onGridImageClick && onGridImageClick(index)}
                 onMouseEnter={() => onGridImageHover && onGridImageHover(index)}
               />
