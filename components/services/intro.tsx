@@ -17,7 +17,7 @@ function Intro() {
       {/* Left image */}
       <div className="flex-shrink-0">
         <Image
-          src="/images/meet.jpg"
+          src="/images/meet.JPG"
           alt="Summer Left"
           width={450}
           height={650}
