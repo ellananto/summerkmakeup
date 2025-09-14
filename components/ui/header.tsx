@@ -72,7 +72,7 @@ function Header1() {
                   ? "text-[#FF99BD]"
                   : pathname === "/"
                   ? "text-white"
-                  : "text-red-600"
+                  : "text-[#FF99BD]"
               }`}
             >
               summer k makeup.

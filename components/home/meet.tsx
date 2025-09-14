@@ -43,7 +43,7 @@ function MeetSummer() {
           Whether it’s everyday makeup or special occasions, Summer has you
           covered.
         </p>
-        <Button className={`mt-6 p-6 text-lg rounded-lg drop-shadow-md cursor-pointer pinkButton font-medium ${montserrat.className}`} style={{ backgroundColor: "#b91c1c" }}>
+        <Button className={`mt-6 p-6 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`} style={{ backgroundColor: "#b91c1c" }}>
           Book Your Look
         </Button>
       </div>

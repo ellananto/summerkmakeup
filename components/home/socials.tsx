@@ -42,24 +42,24 @@ export default function Socials() {
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-        <h2 className="text-5xl md:text-7xl font-medium mb-6">
+        <h2 className="text-5xl md:text-6xl font-medium mb-6">
           Stay in touch on {" "}
           <span ref={titleRef}></span>
         </h2>
 
         <div className="flex gap-10 mt-6">
           <Button
-            className="bg-white p-8 px-20 font-medium text-2xl text-red-600 hover:cursor-pointer hover:bg-red-600 hover:text-white"
+            className="bg-white p-8 px-20 font-medium text-lg text-red-600 hover:cursor-pointer hover:bg-red-600 hover:text-white"
           >
             INSTAGRAM
           </Button>
           <Button
-            className="bg-white p-8 px-20 font-medium text-2xl text-red-600 hover:cursor-pointer hover:bg-red-600 hover:text-white"
+            className="bg-white p-8 px-20 font-medium text-lg text-red-600 hover:cursor-pointer hover:bg-red-600 hover:text-white"
           >
             FACEBOOK
           </Button>
           <Button
-            className="bg-white p-8 px-20 font-medium text-2xl text-red-600 hover:cursor-pointer hover:bg-red-600 hover:text-white"
+            className="bg-white p-8 px-20 font-medium text-lg text-red-600 hover:cursor-pointer hover:bg-red-600 hover:text-white"
           >
             TIK TOK
           </Button>

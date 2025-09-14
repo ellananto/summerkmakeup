@@ -1,6 +1,6 @@
 
 import HeroLanding from "@/components/home/hero";
-import { DemoLTR } from "@/components/home/demo";
+import { Intro } from "@/components/home/intro";
 import MeetSummer from "@/components/home/meet";
 import PortfolioMini from "@/components/home/portfolio";
 import Socials from "@/components/home/socials";
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       {/* Hero Main */}
       <HeroLanding />
-      <DemoLTR />
+      <Intro />
       <MeetSummer />
       <PortfolioMini />
       <Socials />

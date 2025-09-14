@@ -8,6 +8,14 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { Montserrat } from "next/font/google";
+import Link from "next/link";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  display: "swap",
+});
 
 interface CaseProps {
   images: string[];
@@ -34,15 +42,19 @@ function Case({ images }: CaseProps) {
   }, [api, current]);
 
   return (
-    <div className="w-full py-20 lg:py-20">
+    <div className={`w-full py-20 lg:py-20 ${montserrat.className}`}>
       <div className="container mx-auto">
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl md:text-3xl lg:text-5xl tracking-tighter lg:max-w-xl font-regular text-left">
-            Summer looks good on you.
+          <h2 className="text-xl md:text-3xl lg:text-7xl font-regular pb-2">
+            Summer looks good on <span style={{ color: "#FF99BD" }}>you.</span>
           </h2>
-          <p className="text-xl md:text-xl lg:text-lg tracking-tighter lg:max-w-xl font-regular text-left">
+          <p className="text-xl md:text-xl lg:text-lg tracking-tighter lg:max-w-xl font-regular text-left pb-3">
             Click here to see more of her portfolio, and find a look you love!
           </p>
+          <Link href="/portfolio">
+            <button className="bg-pink-300 text-white p-4 rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 hover:cursor-pointer" style={{ backgroundColor: "#FF99BD" }}>View Portfolio</button>
+            
+          </Link>
           <Carousel setApi={setApi} className="w-full py-10">
             <CarouselContent>
               {images.map((src, index) => (

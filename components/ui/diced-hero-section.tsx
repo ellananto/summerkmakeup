@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { ChronicleButton } from './chronicle-button';
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { ChronicleButton } from "./chronicle-button";
 import Image from "next/image";
 
 interface TextStyle {
@@ -58,12 +58,12 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
   mainTextStyle,
   subMainTextStyle,
   buttonStyle = {},
-  componentBorderRadius = '0px',
+  componentBorderRadius = "0px",
   backgroundColor,
-  separatorColor = '#005baa',
-  maxContentWidth = '1536px',
+  separatorColor = "#005baa",
+  maxContentWidth = "1536px",
   mobileBreakpoint = 1000,
-  fontFamily = 'inherit',
+  fontFamily = "inherit",
   isRTL = false,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -80,16 +80,16 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
       }
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, [mobileBreakpoint]);
 
   const getGradientStyle = (gradient?: string) => {
     if (gradient) {
       return {
         backgroundImage: gradient,
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
       };
     }
     return {};
@@ -101,34 +101,34 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
       style={{
         borderRadius: componentBorderRadius,
         backgroundColor,
-        padding: '2rem',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: isMobile ? 'column' : isRTL ? 'row-reverse' : 'row',
-        justifyContent: 'center',
-        alignItems: 'stretch',
-        width: '100%',
+        padding: "2rem",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: isMobile ? "column" : isRTL ? "row-reverse" : "row",
+        justifyContent: "center",
+        alignItems: "stretch",
+        width: "100%",
         maxWidth: maxContentWidth,
-        margin: '0 auto',
-        minHeight: 'auto',
-        height: 'auto',
+        margin: "0 auto",
+        minHeight: "auto",
+        height: "auto",
         fontFamily,
-        position: 'relative',
+        position: "relative",
       }}
     >
       <div
         style={{
           flex: 1,
-          marginRight: isMobile ? 0 : isRTL ? 0 : '2rem',
-          marginLeft: isMobile ? 0 : isRTL ? '2rem' : 0,
-          textAlign: isMobile ? 'center' : isRTL ? 'right' : 'left',
-          alignItems: isMobile ? 'center' : isRTL ? 'flex-end' : 'flex-start',
-          maxWidth: isMobile ? '100%' : '50%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          marginRight: isMobile ? 0 : isRTL ? 0 : "2rem",
+          marginLeft: isMobile ? 0 : isRTL ? "2rem" : 0,
+          textAlign: isMobile ? "center" : isRTL ? "right" : "left",
+          alignItems: isMobile ? "center" : isRTL ? "flex-end" : "flex-start",
+          maxWidth: isMobile ? "100%" : "50%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
           zIndex: 1,
-          paddingBottom: isMobile ? '2rem' : 0,
+          paddingBottom: isMobile ? "2rem" : 0,
         }}
       >
         <div>
@@ -139,8 +139,8 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
             style={{
               ...topTextStyle,
               ...getGradientStyle(topTextStyle?.gradient),
-              direction: isRTLCheck(topText) ? 'rtl' : 'ltr',
-              textAlign: isRTLCheck(topText) ? 'right' : 'left',
+              direction: isRTLCheck(topText) ? "rtl" : "ltr",
+              textAlign: isRTLCheck(topText) ? "right" : "left",
             }}
           >
             {topText}
@@ -151,42 +151,44 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
             transition={{ duration: 0.5, delay: 0.1 }}
             style={{
               ...mainTextStyle,
-              direction: isRTLCheck(mainText) ? 'rtl' : 'ltr',
+              direction: isRTLCheck(mainText) ? "rtl" : "ltr",
               textAlign: isMobile
-                ? 'center'
+                ? "center"
                 : isRTLCheck(mainText)
-                ? 'right'
-                : 'left',
+                ? "right"
+                : "left",
               fontSize: mainTextStyle?.fontSize,
+              lineHeight: "1", // 🔥 add this
             }}
           >
             <motion.span
               style={{
                 ...getGradientStyle(mainTextStyle?.gradient),
-                display: 'inline-block',
+                display: "inline-block",
               }}
             >
               {mainText}
             </motion.span>
           </motion.h1>
+
           <motion.hr
             initial={{ width: 0 }}
-            animate={{ width: '6.25rem' }}
+            animate={{ width: "6.25rem" }}
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{
-              height: '0.25rem',
+              height: "0.25rem",
               background: separatorColor,
-              border: 'none',
+              border: "none",
               margin: isMobile
-                ? '1.125rem auto 1.875rem'
+                ? "1.125rem auto 1.875rem"
                 : isRTLCheck(mainText)
-                ? '1.125rem 0 1.875rem auto'
-                : '1.125rem 0 1.875rem',
+                ? "1.125rem 0 1.875rem auto"
+                : "1.125rem 0 1.875rem",
               alignSelf: isMobile
-                ? 'center'
+                ? "center"
                 : isRTLCheck(mainText)
-                ? 'flex-end'
-                : 'flex-start',
+                ? "flex-end"
+                : "flex-start",
             }}
           />
           <motion.p
@@ -196,8 +198,8 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
             style={{
               ...subMainTextStyle,
               ...getGradientStyle(subMainTextStyle?.gradient),
-              direction: isRTLCheck(subMainText) ? 'rtl' : 'ltr',
-              textAlign: isRTLCheck(subMainText) ? 'right' : 'left',
+              direction: isRTLCheck(subMainText) ? "rtl" : "ltr",
+              textAlign: isRTLCheck(subMainText) ? "right" : "left",
             }}
           >
             {subMainText}
@@ -208,20 +210,20 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           style={{
-            marginTop: '1rem',
-            display: 'flex',
+            marginTop: "1rem",
+            display: "flex",
             justifyContent: isMobile
-              ? 'center'
+              ? "center"
               : isRTL
-              ? 'flex-end'
-              : 'flex-start',
+              ? "flex-end"
+              : "flex-start",
           }}
         >
           <ChronicleButton
             text={buttonText}
             onClick={onMainButtonClick}
             hoverColor={buttonStyle?.hoverColor}
-            hoverForeground={buttonStyle?.hoverForeground ?? '#fff'} // NEW
+            hoverForeground={buttonStyle?.hoverForeground ?? "#fff"} // NEW
             borderRadius={buttonStyle?.borderRadius}
             customBackground={buttonStyle?.backgroundColor}
             customForeground={buttonStyle?.color}
@@ -231,52 +233,52 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
       <div
         style={{
           flex: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: isRTL ? 'flex-start' : 'flex-end',
-          position: 'relative',
-          width: isMobile ? '100%' : '50%',
-          paddingLeft: isMobile ? 0 : isRTL ? 0 : '2rem',
-          paddingRight: isMobile ? 0 : isRTL ? '2rem' : 0,
-          height: 'auto',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: isRTL ? "flex-start" : "flex-end",
+          position: "relative",
+          width: isMobile ? "100%" : "50%",
+          paddingLeft: isMobile ? 0 : isRTL ? 0 : "2rem",
+          paddingRight: isMobile ? 0 : isRTL ? "2rem" : 0,
+          height: "auto",
         }}
       >
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '20px',
-            width: '100%',
-            aspectRatio: '1 / 1',
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: "20px",
+            width: "100%",
+            aspectRatio: "1 / 1",
           }}
         >
           {[slides[3], slides[2], slides[1], slides[0]].map((slide, index) => (
             <div
               key={index}
               style={{
-                position: 'relative',
-                width: '100%',
-                paddingBottom: '100%',
-                overflow: 'hidden',
-                borderRadius: '20px',
+                position: "relative",
+                width: "100%",
+                paddingBottom: "100%",
+                overflow: "hidden",
+                borderRadius: "20px",
               }}
             >
               <Image
                 src={slide.image}
                 alt={slide.title}
                 className={`warped-image ${
-                  ['bottom-right', 'bottom-left', 'top-right', 'top-left'][
+                  ["bottom-right", "bottom-left", "top-right", "top-left"][
                     index
                   ]
                 }`}
                 style={{
-                  position: 'absolute',
+                  position: "absolute",
                   top: 0,
                   left: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  cursor: 'pointer',
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  cursor: "pointer",
                 }}
                 width={slide.width}
                 height={slide.height || slide.width}
@@ -295,31 +297,79 @@ export const DicedHeroSection: React.FC<DicedHeroSectionProps> = ({
           --y: 5px;
         }
         .top-right {
-          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
-          --_g:conic-gradient(at calc(100% - var(--r)) var(--r),#0000 25%,#000 0);
-          --_d:(var(--s) + var(--r));
-          mask: calc(100% - var(--_d) - var(--x)) 0 var(--_m), 100% calc(var(--_d) + var(--y)) var(--_m), radial-gradient(var(--s) at 100% 0,#0000 99%,#000 calc(100% + 1px)) calc(-1*var(--r) - var(--x)) calc(var(--r) + var(--y)), var(--_g) calc(-1*var(--_d) - var(--x)) 0, var(--_g) 0 calc(var(--_d) + var(--y));
+          --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000
+                72%);
+          --_g: conic-gradient(
+            at calc(100% - var(--r)) var(--r),
+            #0000 25%,
+            #000 0
+          );
+          --_d: (var(--s) + var(--r));
+          mask: calc(100% - var(--_d) - var(--x)) 0 var(--_m),
+            100% calc(var(--_d) + var(--y)) var(--_m),
+            radial-gradient(
+                var(--s) at 100% 0,
+                #0000 99%,
+                #000 calc(100% + 1px)
+              )
+              calc(-1 * var(--r) - var(--x)) calc(var(--r) + var(--y)),
+            var(--_g) calc(-1 * var(--_d) - var(--x)) 0,
+            var(--_g) 0 calc(var(--_d) + var(--y));
           mask-repeat: no-repeat;
         }
         .top-left {
-          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
-          --_g:conic-gradient(at var(--r) var(--r),#000 75%,#0000 0);
-          --_d:(var(--s) + var(--r));
-          mask: calc(var(--_d) + var(--x)) 0 var(--_m), 0 calc(var(--_d) + var(--y)) var(--_m), radial-gradient(var(--s) at 0 0,#0000 99%,#000 calc(100% + 1px)) calc(var(--r) + var(--x)) calc(var(--r) + var(--y)), var(--_g) calc(var(--_d) + var(--x)) 0, var(--_g) 0 calc(var(--_d) + var(--y));
+          --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000
+                72%);
+          --_g: conic-gradient(at var(--r) var(--r), #000 75%, #0000 0);
+          --_d: (var(--s) + var(--r));
+          mask: calc(var(--_d) + var(--x)) 0 var(--_m),
+            0 calc(var(--_d) + var(--y)) var(--_m),
+            radial-gradient(var(--s) at 0 0, #0000 99%, #000 calc(100% + 1px))
+              calc(var(--r) + var(--x)) calc(var(--r) + var(--y)),
+            var(--_g) calc(var(--_d) + var(--x)) 0,
+            var(--_g) 0 calc(var(--_d) + var(--y));
           mask-repeat: no-repeat;
         }
         .bottom-left {
-          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
-          --_g:conic-gradient(from 180deg at var(--r) calc(100% - var(--r)),#0000 25%,#000 0);
-          --_d:(var(--s) + var(--r));
-          mask: calc(var(--_d) + var(--x)) 100% var(--_m), 0 calc(100% - var(--_d) - var(--y)) var(--_m), radial-gradient(var(--s) at 0 100%,#0000 99%,#000 calc(100% + 1px)) calc(var(--r) + var(--x)) calc(-1*var(--r) - var(--y)), var(--_g) calc(var(--_d) + var(--x)) 0, var(--_g) 0 calc(-1*var(--_d) - var(--y));
+          --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000
+                72%);
+          --_g: conic-gradient(
+            from 180deg at var(--r) calc(100% - var(--r)),
+            #0000 25%,
+            #000 0
+          );
+          --_d: (var(--s) + var(--r));
+          mask: calc(var(--_d) + var(--x)) 100% var(--_m),
+            0 calc(100% - var(--_d) - var(--y)) var(--_m),
+            radial-gradient(
+                var(--s) at 0 100%,
+                #0000 99%,
+                #000 calc(100% + 1px)
+              )
+              calc(var(--r) + var(--x)) calc(-1 * var(--r) - var(--y)),
+            var(--_g) calc(var(--_d) + var(--x)) 0,
+            var(--_g) 0 calc(-1 * var(--_d) - var(--y));
           mask-repeat: no-repeat;
         }
         .bottom-right {
-          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
-          --_g:conic-gradient(from 90deg at calc(100% - var(--r)) calc(100% - var(--r)),#0000 25%,#000 0);
-          --_d:(var(--s) + var(--r));
-          mask: calc(100% - var(--_d) - var(--x)) 100% var(--_m), 100% calc(100% - var(--_d) - var(--y)) var(--_m), radial-gradient(var(--s) at 100% 100%,#0000 99%,#000 calc(100% + 1px)) calc(-1*var(--r) - var(--x)) calc(-1*var(--r) - var(--y)), var(--_g) calc(-1*var(--_d) - var(--x)) 0, var(--_g) 0 calc(-1*var(--_d) - var(--y));
+          --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000
+                72%);
+          --_g: conic-gradient(
+            from 90deg at calc(100% - var(--r)) calc(100% - var(--r)),
+            #0000 25%,
+            #000 0
+          );
+          --_d: (var(--s) + var(--r));
+          mask: calc(100% - var(--_d) - var(--x)) 100% var(--_m),
+            100% calc(100% - var(--_d) - var(--y)) var(--_m),
+            radial-gradient(
+                var(--s) at 100% 100%,
+                #0000 99%,
+                #000 calc(100% + 1px)
+              )
+              calc(-1 * var(--r) - var(--x)) calc(-1 * var(--r) - var(--y)),
+            var(--_g) calc(-1 * var(--_d) - var(--x)) 0,
+            var(--_g) 0 calc(-1 * var(--_d) - var(--y));
           mask-repeat: no-repeat;
         }
       `}</style>

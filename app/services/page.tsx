@@ -1,9 +1,15 @@
-import Intro from "@/components/services/intro";
+"use client";
+
+import FAQs from "@/components/services/faqs";
+import Policies from "@/components/services/policies";
+import ServiceCards from "@/components/services/service-cards";
 
 export default function Services() {
   return (
     <div>
-      <Intro />
+      <ServiceCards />
+      <Policies />
+      <FAQs />
     </div>
   );
 }

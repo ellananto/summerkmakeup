@@ -51,6 +51,42 @@
   --color-diced-hero-section-main-gradient-to: var(----diced-hero-section-main-gradient-to);
   --color-diced-hero-section-main-gradient-from: var(----diced-hero-section-main-gradient-from);
   --color-diced-hero-section-top-text: var(----diced-hero-section-top-text);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes accordion-down {
+  from {
+    height: 0;
+    }
+  to {
+    height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    }
+  to {
+    height: 0;
+    }
+  }
 }
 
 :root {
@@ -182,7 +218,6 @@
 .animate-bounce-slow {
   animation: bounce-slow 2s infinite;
 }
-
 
 .pinkButton {
   background-color: "#fb447c"

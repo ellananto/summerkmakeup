@@ -62,7 +62,7 @@ function HeroLanding() {
         <p className={`mt-4 text-xl font-light max-w-lg ${montserrat.className}`}>
           Creating flawless looks that feel authentic, unforgettable, and completely yours.
         </p>
-        <Button className={`mt-6 p-8 text-lg rounded-lg drop-shadow-md cursor-pointer pinkButton font-bold ${montserrat.className}`} style={{ backgroundColor: "#FF99BD" }}>
+        <Button className={`mt-6 p-8 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-bold ${montserrat.className}`} style={{ backgroundColor: "#FF99BD" }}>
           Book Your Look
         </Button>
       </div>
