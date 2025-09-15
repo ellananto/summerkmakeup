@@ -80,7 +80,9 @@ const services = [
 
 export default function ServiceCards() {
   return (
-    <div className={`mt-12 px-4 lg:px-8 ${montserrat.className}`}>
+    <div
+      className={`${montserrat.className} px-4 lg:px-8 mt-12 overflow-x-hidden`}
+    >
       {/* Page Heading */}
       <div className="text-left mb-12">
         <h1 className="text-5xl md:text-6xl font-light text-pink-600">
@@ -92,12 +94,12 @@ export default function ServiceCards() {
         </p>
       </div>
 
-      {/* Service Cards */}
+      {/* Service Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (
           <Card
             key={service.id}
-            className="bg-white drop-shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 w-full sm:w-[350px] lg:w-[500px] h-[520px] mx-auto"
+            className="bg-white drop-shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 w-full h-[520px] mx-auto"
           >
             {/* Image */}
             <div className="w-full h-56 relative">
