@@ -36,27 +36,35 @@ function Case({ images }: CaseProps) {
         api.scrollNext();
         setCurrent((prev) => prev + 1);
       }
-    }, 2000); // autoplay every 2s
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [api, current]);
 
   return (
     <div className={`w-full py-20 lg:py-20 ${montserrat.className}`}>
-      <div className="container mx-auto">
+      {/* Container with horizontal padding */}
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col gap-2">
           <h2 className="text-xl md:text-2xl lg:text-2xl font-regular pb-2">
-            Summer looks good on <span style={{ color: "#FF99BD" }}>you.</span>
+            Summer looks good on{" "}
+            <span style={{ color: "#FF99BD" }}>you.</span>
           </h2>
           <p className="text-xl md:text-xl lg:text-lg tracking-tighter lg:max-w-xl font-regular text-left pb-3">
             Click here to see more of her portfolio, and find a look you love!
           </p>
           <Link href="/portfolio">
-            <button className="bg-pink-300 text-white p-4 rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 hover:cursor-pointer" style={{ backgroundColor: "#FF99BD" }}>View Portfolio</button>
-            
+            <button
+              className="bg-pink-300 text-white p-4 rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
+              style={{ backgroundColor: "#FF99BD" }}
+            >
+              View Portfolio
+            </button>
           </Link>
+
+          {/* Carousel with padding */}
           <Carousel setApi={setApi} className="w-full py-10">
-            <CarouselContent>
+            <CarouselContent className="pl-4 lg:pl-8">
               {images.map((src, index) => (
                 <CarouselItem className="flex-none px-4" key={index}>
                   <div className="w-[350px] h-[400px] mx-auto rounded-md overflow-hidden bg-muted relative flex items-center justify-center">

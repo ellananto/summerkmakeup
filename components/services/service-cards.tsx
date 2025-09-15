@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardHeader,
@@ -20,7 +22,7 @@ const services = [
     description:
       "This package includes 1-1.5 hours of service, perfect for brides wanting a flawless wedding day look.",
     image: "/images/testim8.jpg",
-    deposit: "50",
+    deposit: "$50",
     price: "$115",
     link: "/contact",
   },
@@ -78,22 +80,24 @@ const services = [
 
 export default function ServiceCards() {
   return (
-    <div className={`mt-30 ${montserrat.className}`}>
+    <div className={`mt-12 px-4 lg:px-8 ${montserrat.className}`}>
       {/* Page Heading */}
-      <div className="text-left mb-12 ml-15">
-        <h1 className="text-7xl font-light text-pink-600">Makeup Services</h1>
-        <p className="text-gray-600 mt-2">
+      <div className="text-left mb-12">
+        <h1 className="text-5xl md:text-6xl font-light text-pink-600">
+          Makeup Services
+        </h1>
+        <p className="text-gray-600 mt-2 max-w-2xl">
           From timeless bridal looks to bold photoshoot glam, find the service
           that fits your moment.
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (
           <Card
             key={service.id}
-            className="bg-white drop-shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 w-[500] h-[520]"
+            className="bg-white drop-shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 w-full sm:w-[350px] lg:w-[500px] h-[520px] mx-auto"
           >
             {/* Image */}
             <div className="w-full h-56 relative">
@@ -114,7 +118,8 @@ export default function ServiceCards() {
                 {service.description}
               </CardDescription>
               <p className="text-pink-600 font-semibold">
-                Deposit: <span className="text-gray-600 font-medium">{service.price}</span>
+                Deposit:{" "}
+                <span className="text-gray-600 font-medium">{service.deposit}</span>
               </p>
               <p className="text-pink-600 font-semibold">
                 Full Price:{" "}
