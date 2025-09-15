@@ -45,7 +45,7 @@ function Case({ images }: CaseProps) {
     <div className={`w-full py-20 lg:py-20 ${montserrat.className}`}>
       <div className="container mx-auto">
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl md:text-3xl lg:text-7xl font-regular pb-2">
+          <h2 className="text-xl md:text-2xl lg:text-2xl font-regular pb-2">
             Summer looks good on <span style={{ color: "#FF99BD" }}>you.</span>
           </h2>
           <p className="text-xl md:text-xl lg:text-lg tracking-tighter lg:max-w-xl font-regular text-left pb-3">
