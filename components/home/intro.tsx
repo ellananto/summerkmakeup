@@ -19,10 +19,10 @@ export function Intro() {
         subMainText="Struggling to get the look you want? ..."
         buttonText="Learn More"
         slides={[
-          { title: "Purple Cauliflower", image: "/images/makeups.JPG", width: 400, height: 400 },
-          { title: "Strawberry", image: "/images/brush-polaroids.JPG", width: 400, height: 400 },
-          { title: "Feijoa", image: "/images/makeups.JPG", width: 400, height: 400 },
-          { title: "Fruits and Vegetables", image: "/images/brush-polaroids.JPG", width: 400, height: 400 },
+          { title: "Purple Cauliflower", image: "/images/makeups.jpg", width: 400, height: 400 },
+          { title: "Strawberry", image: "/images/brush-polaroids.jpg", width: 400, height: 400 },
+          { title: "Feijoa", image: "/images/makeups.jpg", width: 400, height: 400 },
+          { title: "Fruits and Vegetables", image: "/images/brush-polaroids.jpg", width: 400, height: 400 },
         ]}
         onMainButtonClick={() => console.log("Main button clicked for LTR")}
         onGridImageHover={(index) => console.log(`Grid image ${index} hovered for LTR`)}

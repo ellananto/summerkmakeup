@@ -34,7 +34,7 @@ export default function Socials() {
   return (
     <div className={`${montserrat.className} relative w-full h-[600px]`}>
       <Image
-        src="/images/socials.JPG"
+        src="/images/socials.jpg"
         alt="Socials Banner"
         fill
         className="object-cover"

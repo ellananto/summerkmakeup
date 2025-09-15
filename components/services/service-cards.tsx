@@ -29,7 +29,7 @@ const services = [
     title: "Bridal Package 1",
     description:
       "This package includes two makeup services, ideal for brides to have both a makeup trial and wedding day look.",
-    image: "/images/brush-polaroids.JPG",
+    image: "/images/brush-polaroids.jpg",
     deposit: "$100",
     price: "$220",
     link: "/contact",
@@ -39,7 +39,7 @@ const services = [
     title: "Bridal Package 2",
     description:
       "This package includes three makeup services, perfect for brides wanting a trial, wedding day look, and an additional event.",
-    image: "/images/serviceb1.JPG",
+    image: "/images/serviceb1.jpg",
     deposit: "$150",
     price: "$330",
     link: "/contact",
@@ -59,7 +59,7 @@ const services = [
     title: "Junior Bridesmaid",
     description:
       "This package includes a 25 minute service of light makeup for girls between the ages 11-14.",
-    image: "/images/brush-polaroids.JPG",
+    image: "/images/brush-polaroids.jpg",
     deposit: "$20",
     price: "$45",
     link: "/contact",

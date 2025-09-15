@@ -12,9 +12,9 @@ const montserrat = Montserrat({
 });
 
 const backgroundImages = [
-  "/images/mirror.JPG",
-  "/images/makeup2.JPG",
-  "/images/makeup3.JPG",
+  "/images/mirror.jpg",
+  "/images/makeup2.jpg",
+  "/images/makeup3.jpg",
 ];
 
 const objectPositions = ["center 50%", "center 44%", "center 50%"];

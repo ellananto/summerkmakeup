@@ -7,16 +7,16 @@ function PortfolioMini() {
     <div className="block pb-20">
       <Case
         images={[
-          "/images/testim3.JPG",
-          "/images/testim8.JPG",
-          "/images/testim2.JPG",
-          "/images/testim4.JPG",
-          "/images/testim11.JPG",
-          "/images/testim5.JPG",
-          "/images/testim7.JPG",
-          "/images/testim10.JPG",
-          "/images/testim1.JPG",
-          "/images/testim9.JPG",
+          "/images/testim3.jpg",
+          "/images/testim8.jpg",
+          "/images/testim2.jpg",
+          "/images/testim4.jpg",
+          "/images/testim11.jpg",
+          "/images/testim5.jpg",
+          "/images/testim7.jpg",
+          "/images/testim10.jpg",
+          "/images/testim1.jpg",
+          "/images/testim9.jpg",
         ]}
       />
     </div>
