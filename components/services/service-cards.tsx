@@ -84,7 +84,7 @@ export default function ServiceCards() {
       className={`${montserrat.className} px-4 lg:px-8 mt-12 overflow-x-hidden`}
     >
       {/* Page Heading */}
-      <div className="text-left mb-12">
+      <div className="text-left mb-12 pt-20">
         <h1 className="text-5xl md:text-6xl font-light text-pink-600">
           Makeup Services
         </h1>
