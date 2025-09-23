@@ -24,9 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={onest.className}>
-      <body className={`${onest.variable} antialiased`}>
+      <body
+        className={`${onest.variable} antialiased min-h-screen flex flex-col`}
+        style={{ backgroundColor: "#FFCCDD" }}
+      >
         <Header1 />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

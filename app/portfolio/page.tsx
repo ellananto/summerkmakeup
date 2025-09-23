@@ -3,11 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Socials from "@/components/home/socials";
-import ServiceList from "@/components/services/service-list";
-import Details from "@/components/services/details";
+import ServiceCards from "@/components/services/service-list";
+import PandF from "@/components/services/details";
 import Image from "next/image";
 import { useRef } from "react";
-import FAQs from "@/components/services/faqs";
+import Gallery from "@/components/portfolio/gallery";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,7 +34,7 @@ export default function ServicesSplit() {
       <div ref={ref} className="relative w-full h-[80vh] overflow-hidden">
         <motion.div style={{ y }} className="absolute inset-0">
           <Image
-            src="/images/brush-polaroids.jpg"
+            src="/images/polaroids-socials.jpg"
             alt="Services Hero"
             fill
             style={{
@@ -49,16 +49,14 @@ export default function ServicesSplit() {
         {/* Centered Oval */}
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="bg-pink-200 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
-            Services
+            Portfolio
           </div>
         </div>
       </div>
 
       {/* Main content */}
       <div className="relative z-10 bg-white">
-        <ServiceList />
-        <Details />
-        <FAQs />
+        <Gallery />
         <Socials />
       </div>
     </div>

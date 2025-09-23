@@ -27,7 +27,7 @@ function MeetSummer() {
 
       {/* Center text */}
       <div className="flex-1 text-center px-4">
-        <h2 className="text-5xl font-light py-5">
+        <h2 className="text-5xl font-light py-5 flex flex-col">
           Meet{" "}
           <span className="text-red-700 text-8xl" style={{ display: "inline-block" }}>
             Summer.
@@ -39,7 +39,7 @@ function MeetSummer() {
           <span className="text-red-700 font-bold">confident</span> in their own
           skin. She specializes in creating looks that enhance{" "}
           <span className="text-red-700 font-bold">natural</span> beauty and
-          your <span className="text-red-700 font-bold">personality</span>.
+          your unique <span className="text-red-700 font-bold">personality</span>.
           Whether it’s everyday makeup or special occasions, Summer has you
           covered.
         </p>

@@ -2,12 +2,8 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Montserrat } from "next/font/google";
-import Socials from "@/components/home/socials";
-import ServiceList from "@/components/services/service-list";
-import Details from "@/components/services/details";
 import Image from "next/image";
 import { useRef } from "react";
-import FAQs from "@/components/services/faqs";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,7 +12,7 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-export default function ServicesSplit() {
+export default function Contact() {
   const ref = useRef(null);
 
   // Track scroll progress on the hero section
@@ -34,32 +30,24 @@ export default function ServicesSplit() {
       <div ref={ref} className="relative w-full h-[80vh] overflow-hidden">
         <motion.div style={{ y }} className="absolute inset-0">
           <Image
-            src="/images/brush-polaroids.jpg"
+            src="/collage/just-makeup.jpg"
             alt="Services Hero"
             fill
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-              filter: "brightness(0.7)",
-            }}
+            style={{ objectFit: "cover", objectPosition: "bottom", filter: "brightness(0.7)" }}
             priority
           />
         </motion.div>
 
         {/* Centered Oval */}
         <div className="absolute inset-0 flex justify-center items-center">
-          <div className="bg-pink-200 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
-            Services
+          <div className="bg-red-700 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
+            Contact
           </div>
         </div>
       </div>
 
       {/* Main content */}
       <div className="relative z-10 bg-white">
-        <ServiceList />
-        <Details />
-        <FAQs />
-        <Socials />
       </div>
     </div>
   );

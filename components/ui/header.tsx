@@ -36,13 +36,16 @@ function Header1() {
   }, []);
 
   // Determine text color: white on home, red elsewhere (when not scrolled)
-  const defaultTextColor =
-    pathname === "/" ? "text-white" : "text-black";
+  const defaultTextColor = pathname === "/" ? "text-white" : "text-black";
 
   return (
     <header
       className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
+        pathname === "/"
+          ? scrolled
+            ? "bg-white/70 backdrop-blur-md shadow-sm"
+            : "bg-transparent"
+          : "bg-white/70 backdrop-blur-md shadow-sm"
       }`}
     >
       <div
@@ -75,7 +78,7 @@ function Header1() {
                   : "text-[#FF99BD]"
               }`}
             >
-              summer k makeup.
+              summer k makeup
             </p>
           </Link>
         </div>
@@ -100,11 +103,15 @@ function Header1() {
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
             {isOpen ? (
               <X
-                className={`w-6 h-6 ${scrolled ? "text-gray-800" : defaultTextColor}`}
+                className={`w-6 h-6 ${
+                  scrolled ? "text-gray-800" : defaultTextColor
+                }`}
               />
             ) : (
               <Menu
-                className={`w-6 h-6 ${scrolled ? "text-gray-800" : defaultTextColor}`}
+                className={`w-6 h-6 ${
+                  scrolled ? "text-gray-800" : defaultTextColor
+                }`}
               />
             )}
           </Button>

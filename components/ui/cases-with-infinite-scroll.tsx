@@ -46,17 +46,16 @@ function Case({ images }: CaseProps) {
       {/* Container with horizontal padding */}
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl md:text-2xl lg:text-2xl font-regular pb-2">
-            Summer looks good on{" "}
-            <span style={{ color: "#FF99BD" }}>you.</span>
+          <h2 className="text-xl md:text-4xl lg:text-6xl pb-2 text-red-700">
+            Summer looks good on you.
           </h2>
           <p className="text-xl md:text-xl lg:text-lg tracking-tighter lg:max-w-xl font-regular text-left pb-3">
-            Click here to see more of her portfolio, and find a look you love!
+            Click below to see more of her portfolio, and find a look you love!
           </p>
           <Link href="/portfolio">
             <button
-              className="bg-pink-300 text-white p-4 rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
-              style={{ backgroundColor: "#FF99BD" }}
+              className="bg-red-700 text-white font-thin p-4 rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
+              
             >
               View Portfolio
             </button>

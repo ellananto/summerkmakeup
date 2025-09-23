@@ -55,9 +55,7 @@ function HeroLanding() {
       {/* Foreground content */}
       <div className="relative z-10 text-left text-white pl-16 pr-8 max-w-3xl">
         <h1 className={`text-7xl leading-tight whitespace-pre-line font-extrabold ${montserrat.className}`}>
-          Your Beauty.
-          {"\n"}Your Confidence.
-          {"\n"}Your Way.
+          A look that feels effortlessly you.
         </h1>
         <p className={`mt-4 text-xl font-light max-w-lg ${montserrat.className}`}>
           Creating flawless looks that feel authentic, unforgettable, and completely yours.

@@ -2,12 +2,8 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Montserrat } from "next/font/google";
-import Socials from "@/components/home/socials";
-import ServiceList from "@/components/services/service-list";
-import Details from "@/components/services/details";
-import Image from "next/image";
+import Socials from "@/components/home/socials";import Image from "next/image";
 import { useRef } from "react";
-import FAQs from "@/components/services/faqs";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -37,28 +33,21 @@ export default function ServicesSplit() {
             src="/images/brush-polaroids.jpg"
             alt="Services Hero"
             fill
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-              filter: "brightness(0.7)",
-            }}
+            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
           />
         </motion.div>
 
         {/* Centered Oval */}
         <div className="absolute inset-0 flex justify-center items-center">
-          <div className="bg-pink-200 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
-            Services
+          <div className="bg-red-700 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
+            About Me
           </div>
         </div>
       </div>
 
       {/* Main content */}
       <div className="relative z-10 bg-white">
-        <ServiceList />
-        <Details />
-        <FAQs />
         <Socials />
       </div>
     </div>
