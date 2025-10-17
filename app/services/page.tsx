@@ -17,7 +17,7 @@ export default function ServicesSplit() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-visible">
       {/* HERO */}
       <div ref={ref} className="relative w-full h-screen overflow-hidden">
         {/* Clip the hero image */}
@@ -54,7 +54,7 @@ export default function ServicesSplit() {
       </div>
 
       {/* Main content */}
-      <div>
+      <div className="service-page">
         <ServiceList />
         <Details />
         <FAQs /> 

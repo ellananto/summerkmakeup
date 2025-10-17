@@ -30,7 +30,7 @@ function HeroLanding() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden text-white">
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden text-white overflow-x-hidden">
       {/* Background images */}
       {backgroundImages.map((src, i) => (
         <Image

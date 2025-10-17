@@ -3,7 +3,7 @@ import { Case } from "@/components/ui/cases-with-infinite-scroll";
 
 function PortfolioMini() {
   return (
-    <div className="block">
+    <div className="block overflow-x-hidden">
       <Case
         images={[
           "/images/testim4.jpg",

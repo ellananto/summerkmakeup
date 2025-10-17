@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export default function Details() {
   return (
-    <div className="flex flex-col md:flex-row w-full h-auto">
+    <div className="flex flex-col md:flex-row w-full h-auto overflow-x-visible">
       {/* Right side image (mobile first) */}
       <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col justify-center items-center bg-gray-100 border-b-2 border-black order-1 md:order-2 px-4 sm:px-8">
         <h2

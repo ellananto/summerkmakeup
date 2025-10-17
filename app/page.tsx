@@ -8,7 +8,7 @@ import Socials from "@/components/home/socials";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <HeroLanding />
       <Intro />
       <MeetSummer />

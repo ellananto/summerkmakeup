@@ -46,7 +46,7 @@ export default function Spotlight() {
         {/* Left Image */}
         <div className="relative w-40 sm:w-56 md:w-64 aspect-[3/4] overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:cursor-pointer">
           <Image
-            src="/portfolio-2/spotlight1.jpg"
+            src="/portfolio-2/spotlight2.jpg"
             alt="Client Spotlight Left"
             fill
             style={{ objectFit: "cover" }}
@@ -57,7 +57,7 @@ export default function Spotlight() {
         {/* Center Image */}
         <div className="relative w-56 sm:w-72 md:w-96 aspect-[3/4] overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 hover:cursor-pointer z-10">
           <Image
-            src="/portfolio-2/spotlight2.jpg"
+            src="/portfolio-2/spotlight1.jpg"
             alt="Client Spotlight Center"
             fill
             style={{ objectFit: "cover" }}

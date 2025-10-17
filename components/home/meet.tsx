@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 function MeetSummer() {
   return (
     <div
-      className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center px-6 sm:px-10 lg:px-20 py-16 lg:py-20 gap-8`}
+      className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center px-6 sm:px-10 lg:px-20 py-16 lg:py-20 gap-8 overflow-x-hidden`}
     >
       {/* Top image on mobile / left image on desktop */}
       <div className="flex-shrink-0 w-full lg:w-auto">

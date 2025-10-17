@@ -32,7 +32,7 @@ export default function Socials() {
 
   return (
     <div
-      className={`${montserrat.className} relative w-full min-h-[60vh] sm:min-h-[70vh] md:h-[600px]`}
+      className={`${montserrat.className} relative w-full min-h-[60vh] sm:min-h-[70vh] md:h-[600px] overflow-x-hidden`}
     >
       {/* Background image */}
       <Image
