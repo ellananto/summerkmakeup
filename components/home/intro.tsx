@@ -25,8 +25,8 @@ export function Intro() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <div className="flex flex-col md:flex-row w-full min-h-screen pt-20">
-      {/* Left side: text (full width on mobile, half on desktop) */}
+    <div className="flex flex-col md:flex-row w-full min-h-screen pt-20 overflow-x-hidden">
+      {/* Left side: text */}
       <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-10 md:px-16 h-auto md:h-[80vh] text-center md:text-left">
         <div className="flex flex-col">
           <h1
@@ -66,12 +66,15 @@ export function Intro() {
         </p>
       </div>
 
-      {/* Right side: parallax image (full width on mobile, half on desktop) */}
+      {/* Right side: parallax image */}
       <div
         ref={ref}
         className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-[80vh] overflow-hidden mt-6 md:mt-0 shadow-lg"
       >
-        <motion.div style={{ y }} className="absolute inset-0">
+        <motion.div
+          style={{ y }}
+          className="absolute top-0 left-0 w-full h-full"
+        >
           <Image
             src="/collage/shoot2.jpg"
             alt="Makeup session"

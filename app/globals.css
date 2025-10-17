@@ -188,6 +188,19 @@
   --diced-hero-section-button-hover-fg: #ffffff;
 }
 
+/* Box sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -196,6 +209,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 .sparkle {
   position: absolute;
   width: 6px;
