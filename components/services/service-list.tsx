@@ -15,30 +15,42 @@ export default function ServiceList() {
   const [showWedding, setShowWedding] = useState(false);
 
   return (
-    <div className="flex w-full min-h-screen">
-      {/* Left side (pinned/static) */}
-      <div className="w-1/2 h-screen sticky top-0 flex flex-col justify-center items-center bg-gray-100">
+    <div className="flex flex-col md:flex-row w-full min-h-screen">
+      {/* Left side (pinned on desktop, stacked on mobile) */}
+      <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col justify-center items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8">
         <h2
-          className={`${montserrat.className} text-5xl text-red-700 font-bold italic text-center pt-20`}
+          className="text-6xl sm:text-8xl text-red-700 text-center pt-10 pb-4"
+          style={{ fontFamily: "DarlineScript, sans-serif" }}
         >
-          PRICING
+          Pricing
         </h2>
         <Image
           src="/collage/shoot1.jpg"
           alt="Static Left"
-          width={400}
-          height={400}
-          className="mb-10 mt-5"
+          width={500} // desktop width
+          height={500} // desktop height
+          className="mb-10 mt-5 w-full max-w-[300px] sm:max-w-[400px] xs:max-w-[250px] object-cover"
         />
       </div>
 
       {/* Right side (scrolling) */}
-      <div className={`${montserrat.className} w-1/2`}>
+      <div
+        className={`${montserrat.className} w-full md:w-1/2 border-l-0 md:border-l-2 border-black`}
+      >
+        {/* Your sections remain the same */}
         {/* Events */}
         <section className="h-[70h] flex flex-col text-left bg-red-700 border-b-2 border-black text-white">
           <div className="mx-10 mb-10">
-            <h1 className="text-4xl py-5 font-bold text-center">Events</h1>
-            <h1 className="text-2xl py-5 font-bold ">
+            <h1
+              className="text-6xl pb-5 pt-6 font-bold text-center tracking-wider"
+              style={{ fontFamily: "DarlineSerif, sans-serif" }}
+            >
+              Events
+            </h1>
+            <h1
+              className="text-4xl py-5 tracking-wider font-bold"
+              style={{ fontFamily: "DarlineSerif, sans-serif" }}
+            >
               General Event Makeup - $125
             </h1>
             <ul className="text-lg">
@@ -61,13 +73,21 @@ export default function ServiceList() {
               onClick={() => setShowBridal(!showBridal)}
               className="w-full flex justify-between items-center py-5"
             >
-              <h1 className="text-4xl font-bold text-center w-full">Bridal</h1>
+              <h1
+                className="text-6xl font-bold text-center w-full tracking-wider"
+                style={{ fontFamily: "DarlineSerif, sans-serif" }}
+              >
+                Bridal
+              </h1>
               {showBridal ? <ChevronUp /> : <ChevronDown />}
             </button>
             {showBridal && (
               <div className="transition-all duration-300 ease-in-out">
                 <div>
-                  <h1 className="text-2xl py-5 font-bold ">
+                  <h1
+                    className="text-4xl py-5 tracking-wider font-bold"
+                    style={{ fontFamily: "DarlineSerif, sans-serif" }}
+                  >
                     Wedding Day - $140
                   </h1>
                   <ul className=" text-lg">
@@ -82,7 +102,10 @@ export default function ServiceList() {
                   </ul>
                 </div>
                 <div>
-                  <h1 className="text-2xl py-5 font-bold ">
+                  <h1
+                    className="text-4xl py-5 tracking-wider font-bold"
+                    style={{ fontFamily: "DarlineSerif, sans-serif" }}
+                  >
                     Wedding Day & Trial - $270
                   </h1>
                   <ul className=" text-lg">
@@ -97,7 +120,10 @@ export default function ServiceList() {
                   </ul>
                 </div>
                 <div>
-                  <h1 className="text-2xl py-5 font-bold ">
+                  <h1
+                    className="text-4xl py-5 tracking-wider font-bold"
+                    style={{ fontFamily: "DarlineSerif, sans-serif" }}
+                  >
                     Additional Bridal Sessions - $135
                   </h1>
                   <ul className=" text-lg">
@@ -120,10 +146,13 @@ export default function ServiceList() {
         <section className="h-auto flex flex-col text-left bg-white border-b-2 border-black text-red-700">
           <div className="mx-10 mb-10">
             <button
-              onClick={() => setShowWedding(!showWedding)}
+              onClick={() => setShowWedding(showWedding)}
               className="w-full flex justify-between items-center py-5"
             >
-              <h1 className="text-4xl font-bold text-center w-full">
+              <h1
+                className="text-6xl font-bold text-center w-full tracking-wider font-bold"
+                style={{ fontFamily: "DarlineSerif, sans-serif" }}
+              >
                 Wedding Party
               </h1>
               {showWedding ? <ChevronUp /> : <ChevronDown />}
@@ -131,7 +160,10 @@ export default function ServiceList() {
             {showWedding && (
               <div className="transition-all duration-300 ease-in-out">
                 <div className="text-left">
-                  <h1 className="text-2xl py-5 font-bold ">
+                  <h1
+                    className="text-4xl py-5 tracking-wider font-bold"
+                    style={{ fontFamily: "DarlineSerif, sans-serif" }}
+                  >
                     Bridal Party - $110
                   </h1>
                   <ul className="text-lg">
@@ -146,7 +178,10 @@ export default function ServiceList() {
                   </ul>
                 </div>
                 <div className="text-left">
-                  <h1 className="text-2xl py-5 font-bold ">
+                  <h1
+                    className="text-4xl py-5 tracking-wider font-bold"
+                    style={{ fontFamily: "DarlineSerif, sans-serif" }}
+                  >
                     Junior Bridesmaid - $65
                   </h1>
                   <ul className="text-lg">
@@ -161,7 +196,10 @@ export default function ServiceList() {
                   </ul>
                 </div>
                 <div className="text-left">
-                  <h1 className="text-2xl py-5 font-bold ">
+                  <h1
+                    className="text-4xl py-5 tracking-wider font-bold"
+                    style={{ fontFamily: "DarlineSerif, sans-serif" }}
+                  >
                     Flower Girl - $20
                   </h1>
                   <ul className="text-lg">
@@ -183,9 +221,19 @@ export default function ServiceList() {
         {/* Commercial */}
         <section className="h-[70h] flex flex-col bg-red-700 text-white border-b-2 border-black">
           <div className="mx-10 mb-10">
-            <h1 className="text-4xl font-bold py-5 text-center">Commercial</h1>
+            <h1
+              className="text-6xl font-bold py-5 text-center tracking-wider"
+              style={{ fontFamily: "DarlineSerif, sans-serif" }}
+            >
+              Commercial
+            </h1>
             <div className="text-left">
-              <h1 className="text-2xl py-5 font-semibold">Commercial Makeup</h1>
+              <h1
+                className="text-4xl py-5 tracking-wider font-bold"
+                style={{ fontFamily: "DarlineSerif, sans-serif" }}
+              >
+                Commercial Makeup
+              </h1>
               <ul className=" text-lg">
                 <li className="mb-2 flex items-center gap-2">
                   <BookHeart />
@@ -206,11 +254,19 @@ export default function ServiceList() {
         </section>
 
         {/* Lessons */}
-        <section className="h-[70h] flex flex-col bg-white text-red-700">
+        <section className="h-[70h] flex flex-col bg-white text-red-700 border-b-2 border-black">
           <div className="mx-10 mb-10">
-            <h1 className="text-4xl font-bold py-5 text-center">Lessons</h1>
+            <h1
+              className="text-6xl font-bold py-5 text-center tracking-wider"
+              style={{ fontFamily: "DarlineSerif, sans-serif" }}
+            >
+              Lessons
+            </h1>
             <div className="text-left">
-              <h1 className="text-2xl py-5 font-semibold">
+              <h1
+                className="text-4xl py-5 tracking-wider font-bold"
+                style={{ fontFamily: "DarlineSerif, sans-serif" }}
+              >
                 One on One Lessons - $175
               </h1>
               <ul className=" text-lg">

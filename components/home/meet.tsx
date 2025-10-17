@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -12,68 +13,68 @@ const montserrat = Montserrat({
 function MeetSummer() {
   return (
     <div
-      className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center px-10 py-20 gap-8`}
+      className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center px-6 sm:px-10 lg:px-20 py-16 lg:py-20 gap-8`}
     >
-      {/* Left image */}
-      <div className="flex-shrink-0">
+      {/* Top image on mobile / left image on desktop */}
+      <div className="flex-shrink-0 w-full lg:w-auto">
         <Image
           src="/images/meet.jpg"
           alt="Summer Left"
           width={450}
           height={650}
-          className="rounded-lg object-cover shadow-xl"
+          className="rounded-lg object-cover shadow-xl w-full h-auto"
         />
       </div>
 
       {/* Center text */}
-      <div className="flex-1 text-center px-4">
-        <h2 className="text-5xl font-light py-5 flex flex-col">
+      <div className="flex-1 w-full text-center lg:text-left px-2 sm:px-4">
+        <h2
+          className="text-4xl text-center sm:text-5xl lg:text-6xl font-light py-4 flex flex-col tracking-wider items-center lg:items-center"
+          style={{ fontFamily: "DarlineSerif, sans-serif" }}
+        >
           Meet{" "}
-          <span className="text-red-700 text-8xl" style={{ display: "inline-block" }}>
+          <span
+            className="text-red-700 text-center text-8xl sm:text-8xl lg:text-9xl pt-3 lg:pt-5"
+            style={{
+              display: "inline-block",
+              fontFamily: "DarlineScript, sans-serif",
+            }}
+          >
             Summer.
           </span>
         </h2>
-        <p className="text-lg text-gray-700">
+        <p className="text-center sm:text-lg text-gray-700 mt-4">
           Summer is a professional makeup artist with years of experience
           helping people feel{" "}
           <span className="text-red-700 font-bold">confident</span> in their own
           skin. She specializes in creating looks that enhance{" "}
           <span className="text-red-700 font-bold">natural</span> beauty and
-          your unique <span className="text-red-700 font-bold">personality</span>.
-          Whether it’s everyday makeup or special occasions, Summer has you
-          covered.
+          your unique{" "}
+          <span className="text-red-700 font-bold">personality</span>. Whether
+          it’s everyday makeup or special occasions, Summer has you covered.
         </p>
-        <Button className={`mt-6 p-6 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`} style={{ backgroundColor: "#b91c1c" }}>
-          Book Your Look
-        </Button>
+        <div className="text-center">
+          <Link href="/about">
+            <Button
+              className={`mt-6 p-6 text-lg text-center rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
+              style={{ backgroundColor: "#b91c1c" }}
+            >
+              Learn More
+            </Button>
+          </Link>
+        </div>
       </div>
 
-      {/* Right image */}
-      <div className="flex-shrink-0">
+      {/* Bottom image on mobile / right image on desktop */}
+      <div className="flex-shrink-0 w-full lg:w-auto mt-6 lg:mt-0">
         <Image
           src="/images/meet-right.jpg"
           alt="Summer Right"
           width={450}
           height={650}
-          className="rounded-lg object-cover shadow-xl"
+          className="rounded-lg object-cover shadow-xl w-full h-auto"
         />
       </div>
-
-      {/* Animation for SUMMER */}
-      <style jsx>{`
-        span {
-          animation: bounce 1.5s infinite;
-        }
-        @keyframes bounce {
-          0%,
-          100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-5px);
-          }
-        }
-      `}</style>
     </div>
   );
 }

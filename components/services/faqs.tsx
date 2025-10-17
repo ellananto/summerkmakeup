@@ -1,19 +1,19 @@
+"use client";
+
 import { Montserrat } from "next/font/google";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  display: "swap",
-});
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
 } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-
 import { Plus } from "lucide-react";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  display: "swap",
+});
 
 const items = [
   {
@@ -77,20 +77,28 @@ const items = [
 export default function FAQs() {
   return (
     <div
-      className={`py-20 flex flex-col justify-center items-center ${montserrat.className}`}
+      className={`py-14 px-5 sm:py-20 flex flex-col justify-center items-center ${montserrat.className}`}
       style={{ backgroundColor: "#FFCCDD" }}
     >
-      <div className="text-center mb-12">
-        <h1 className="text-7xl font-light text-red-700">FAQs</h1>
+      {/* Title */}
+      <div className="text-center mb-8 sm:mb-12 px-4">
+        <h1
+          className="text-5xl sm:text-7xl text-red-700 leading-tight"
+          style={{ fontFamily: "DarlineScript, sans-serif" }}
+        >
+          Common
+          <span
+            className="-ml-1 sm:-ml-2"
+            style={{ fontFamily: "DarlineSerif, sans-serif" }}
+          >
+            FAQ&apos;s
+          </span>
+        </h1>
       </div>
 
-      <div className="w-[70vw] max-w-[1200px] space-y-4 bg-white p-10 rounded-lg shadow-lg mx-auto">
-        <Accordion
-          type="single"
-          collapsible
-          className="w-full"
-          defaultValue="3"
-        >
+      {/* Accordion */}
+      <div className="w-full max-w-[1200px] px-4 sm:px-8 space-y-4 bg-white p-6 sm:p-10 rounded-lg shadow-lg">
+        <Accordion type="single" collapsible className="w-full">
           {items.map((item) => (
             <AccordionItem
               value={item.id}
@@ -98,11 +106,13 @@ export default function FAQs() {
               className="py-2 text-red-700 w-full"
             >
               <AccordionPrimitive.Header className="w-full">
-                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between w-full py-2 text-left text-[30px] font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
-                  <span className="flex flex-col space-y-1 text-lg font-normal">
-                    <span className="text-xl">{item.title}</span>
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between w-full py-2 text-left text-[20px] sm:text-[28px] font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
+                  <span className="flex flex-col space-y-1 text-base sm:text-lg font-normal">
+                    <span className="text-lg sm:text-xl">{item.title}</span>
                     {item.sub && (
-                      <span className="text-xl font-thin">{item.sub}</span>
+                      <span className="text-base sm:text-lg font-thin">
+                        {item.sub}
+                      </span>
                     )}
                   </span>
                   <Plus
@@ -113,7 +123,7 @@ export default function FAQs() {
                   />
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
-              <AccordionContent className="pb-2 text-muted-foreground text-md w-full">
+              <AccordionContent className="pb-2 text-gray-700 text-sm sm:text-base w-full">
                 {item.content}
               </AccordionContent>
             </AccordionItem>

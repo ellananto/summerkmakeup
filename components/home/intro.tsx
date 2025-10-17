@@ -25,45 +25,55 @@ export function Intro() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <div className="flex w-full min-h-screen pt-20">
-      {/* Left side: text */}
-      <div className="w-1/2 flex flex-col justify-center px-16">
-        <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col md:flex-row w-full min-h-screen pt-20">
+      {/* Left side: text (full width on mobile, half on desktop) */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-10 md:px-16 h-auto md:h-[80vh] text-center md:text-left">
+        <div className="flex flex-col">
           <h1
-            className={`${montserrat.className} text-4xl md:text-6xl font-thin text-red-700 text-center`}
+            className="text-3xl sm:text-4xl md:text-[8rem] font-thin text-red-700 mb-2"
+            style={{ fontFamily: "DarlineSerif, sans-serif" }}
           >
-            Tired of makeup that just doesn’t feel like{" "}
+            WELCOME TO
           </h1>
-          <span className="text-5xl md:text-6xl font-thin text-red-700 mb-6 italic">you?</span>
+          <h1
+            className="text-7xl sm:text-5xl md:text-6xl font-thin text-red-700 mb-5 w-full"
+            style={{ fontFamily: "DarlineScript, sans-serif" }}
+          >
+            Summer K Makeup
+          </h1>
         </div>
-
-        <p className={`${montserrat.className} text-2xl text-red-700 mb-6`}>
-          Struggling to get the look you want? Let&apos;s make it effortless and
-          fun.
+        <p className={`text-base sm:text-lg mb-6 ${montserrat.className}`}>
+          Does any of this sound familiar? You are not alone!
         </p>
-        <ul className={`${montserrat.className} space-y-3 text-lg`}>
+        <ul className={`${montserrat.className} space-y-3 text-base sm:text-lg`}>
           {[
-            "Natural glow without looking “overdone”",
-            "Long-lasting beauty for your big day",
-            "Makeup that enhances your features, not hides them",
-            "A fun, stress-free experience from start to finish",
-          ].map((text, index) => (
-            <li key={index} className="flex items-center gap-2 text-gray-700">
+            "Worried your makeup will look too heavy or unnatural?",
+            "Frustrated when makeup fades before the night is over?",
+            "Tired of artists who don’t listen to your vision?",
+            "Looking for a stress-free, fun experience on your big day?",
+          ].map((question, index) => (
+            <li key={index} className="flex items-center gap-2">
               <BookHeart className="text-red-700 flex-shrink-0 text-lg" />
-              <span>{text}</span>
+              <span>{question}</span>
             </li>
           ))}
         </ul>
+        <p className={`text-base sm:text-lg mt-6 ${montserrat.className}`}>
+          Summer K Makeup solves all of these by creating a{" "}
+          <span className="italic">personalized, lasting </span>
+          look that enhances your natural beauty and makes you feel
+          confident and comfortable.
+        </p>
       </div>
 
-      {/* Right side: parallax image */}
+      {/* Right side: parallax image (full width on mobile, half on desktop) */}
       <div
         ref={ref}
-        className="w-1/2 relative h-[80vh] overflow-hidden mr-10 rounded-lg shadow-lg" // smaller than full screen
+        className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-[80vh] overflow-hidden mt-6 md:mt-0 shadow-lg"
       >
         <motion.div style={{ y }} className="absolute inset-0">
           <Image
-            src="/collage/shoot2.jpg" // replace with your image
+            src="/collage/shoot2.jpg"
             alt="Makeup session"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}

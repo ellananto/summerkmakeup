@@ -6,7 +6,6 @@ import { Button } from "../ui/button";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-// Montserrat font
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
@@ -27,12 +26,15 @@ export default function Socials() {
     });
 
     return () => {
-      typed.destroy(); // cleanup on unmount
+      typed.destroy();
     };
   }, []);
 
   return (
-    <div className={`${montserrat.className} relative w-full h-[600px]`}>
+    <div
+      className={`${montserrat.className} relative w-full min-h-[60vh] sm:min-h-[70vh] md:h-[600px]`}
+    >
+      {/* Background image */}
       <Image
         src="/images/socials.jpg"
         alt="Socials Banner"
@@ -40,20 +42,27 @@ export default function Socials() {
         className="object-cover"
         priority
       />
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-        <h2 className="text-5xl md:text-6xl font-medium mb-6">
+
+      {/* Content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-medium mb-4 sm:mb-6 leading-tight">
           Stay in touch <span ref={titleRef}></span>
         </h2>
-        <div className="flex gap-10 mt-6">
-          <Button className="bg-white p-8 px-20 font-medium text-lg text-red-600 hover:cursor-pointer hover:bg-red-700 hover:text-white">
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 mt-4 sm:mt-6 w-full sm:w-auto items-center justify-center">
+          <Button className="bg-white py-4 px-12 sm:py-6 sm:px-16 md:p-8 md:px-20 font-medium text-base sm:text-lg text-red-600 hover:scale-105 transition-transform duration-300 hover:cursor-pointer hover:bg-red-700 hover:text-white w-3/4 sm:w-auto">
             INSTAGRAM
           </Button>
-          <Button className="bg-red-700 p-8 px-20 font-medium text-lg text-white hover:cursor-pointer hover:bg-white hover:text-red-700">
+
+          <Button className="bg-red-700 py-4 px-12 sm:py-6 sm:px-16 md:p-8 md:px-20 font-medium text-base sm:text-lg text-white hover:scale-105 transition-transform duration-300 hover:cursor-pointer hover:bg-white hover:text-red-700 w-3/4 sm:w-auto">
             BOOK NOW
           </Button>
-          <Button className="bg-white p-8 px-20 font-medium text-lg text-red-600 hover:cursor-pointer hover:bg-red-700 hover:text-white">
-            TIK TOK
+
+          <Button className="bg-white py-4 px-12 sm:py-6 sm:px-16 md:p-8 md:px-20 font-medium text-base sm:text-lg text-red-600 hover:scale-105 transition-transform duration-300 hover:cursor-pointer hover:bg-red-700 hover:text-white w-3/4 sm:w-auto">
+            TIKTOK
           </Button>
         </div>
       </div>

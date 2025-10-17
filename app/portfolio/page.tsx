@@ -1,63 +1,70 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Montserrat } from "next/font/google";
 import Socials from "@/components/home/socials";
-import ServiceCards from "@/components/services/service-list";
-import PandF from "@/components/services/details";
 import Image from "next/image";
 import { useRef } from "react";
 import Gallery from "@/components/portfolio/gallery";
+import Gallery2 from "@/components/portfolio/gallery2";
+import Spotlight from "@/components/portfolio/spotlight";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: "italic",
-  display: "swap",
-});
-
-export default function ServicesSplit() {
+export default function Portfolio() {
   const ref = useRef(null);
 
-  // Track scroll progress on the hero section
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  // Move image slower than scroll (parallax)
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <div className="relative">
-      {/* Parallax Hero Image */}
-      <div ref={ref} className="relative w-full h-[80vh] overflow-hidden">
-        <motion.div style={{ y }} className="absolute inset-0">
+    <div className="relative overflow-x-hidden">
+      {/* HERO */}
+      <div
+        ref={ref}
+        className="relative w-full min-h-[70vh] sm:min-h-[80vh] lg:h-screen overflow-hidden"
+      >
+        {/* Parallax Background */}
+        <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
-            src="/images/polaroids-socials.jpg"
-            alt="Services Hero"
+            src="/images/brush-polaroids.jpg"
+            alt="Portfolio Hero"
             fill
+            priority
             style={{
               objectFit: "cover",
-              objectPosition: "center",
-              filter: "brightness(0.7)",
+              objectPosition: "center 67%",
+              filter: "brightness(0.6)",
             }}
-            priority
           />
         </motion.div>
 
-        {/* Centered Oval */}
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className="bg-pink-200 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
+        {/* Centered Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4 sm:px-6">
+          <p
+            className="text-[clamp(1.5rem,5vw,3rem)] sm:text-[clamp(2rem,5vw,4rem)] text-white mb-3 sm:mb-6 drop-shadow-lg max-w-[90vw] break-words"
+            style={{ fontFamily: "DarlineScript, sans-serif" }}
+          >
+            The Summer Collection
+          </p>
+          <h1
+            className="text-[clamp(4rem,10vw,12rem)] sm:text-[clamp(5rem,10vw,14rem)] font-bold text-white leading-none drop-shadow-lg max-w-[90vw] break-words"
+            style={{ fontFamily: "DarlineSerif, sans-serif" }}
+          >
             Portfolio
-          </div>
+          </h1>
         </div>
       </div>
 
-      {/* Main content */}
-      <div className="relative z-10 bg-white">
+      {/* Main Content */}
+      <div className="relative z-10 mt-16 sm:mt-20">
+        <Gallery2 />
         <Gallery />
-        <Socials />
+        <Spotlight />
+        <div className="pt-8 sm:pt-12">
+          <Socials />
+        </div>
       </div>
     </div>
   );

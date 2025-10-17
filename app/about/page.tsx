@@ -1,55 +1,54 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { IntroAbout } from "@/components/about/intro";
+import Image from "next/image";
 import { Montserrat } from "next/font/google";
-import Socials from "@/components/home/socials";import Image from "next/image";
-import { useRef } from "react";
+import Socials from "@/components/home/socials";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: "italic",
+  weight: ["400", "800"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-export default function ServicesSplit() {
-  const ref = useRef(null);
-
-  // Track scroll progress on the hero section
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  // Move image slower than scroll (parallax)
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-
+export default function AboutHero() {
   return (
-    <div className="relative">
-      {/* Parallax Hero Image */}
-      <div ref={ref} className="relative w-full h-[80vh] overflow-hidden">
-        <motion.div style={{ y }} className="absolute inset-0">
+    <div className="flex flex-col">
+      {/* Hero image with extra top space on mobile */}
+      <div className="pt-24 sm:pt-0">
+        <div className="relative w-full h-[70vw] sm:h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden">
           <Image
-            src="/images/brush-polaroids.jpg"
-            alt="Services Hero"
+            src="/images/Portfolio (11).jpg"
+            alt="Portfolio Hero"
             fill
-            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
+            style={{
+              objectFit: "contain",
+              objectPosition: "top",
+            }}
           />
-        </motion.div>
-
-        {/* Centered Oval */}
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className="bg-red-700 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
-            About Me
-          </div>
         </div>
       </div>
 
-      {/* Main content */}
-      <div className="relative z-10 bg-white">
-        <Socials />
+      {/* Scrolling text banner */}
+      <div className="w-full bg-white bg-opacity-90 py-5 sm:py-6 md:py-7 border-2 border-black overflow-hidden">
+        <div className="flex whitespace-nowrap animate-marquee text-xl sm:text-2xl md:text-3xl lg:text-3xl">
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          {/* Repeat for seamless loop */}
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+          <span className={`px-6 sm:px-8 md:px-10 lg:px-12 ${montserrat.className} italic`}>summer k makeup</span>
+        </div>
       </div>
+      <IntroAbout />
+      <Socials />
     </div>
   );
 }

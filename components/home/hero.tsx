@@ -30,37 +30,48 @@ function HeroLanding() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen flex-col items-start justify-center overflow-hidden">
-      {backgroundImages.map((src, i) => {
-        return (
-          <Image
-            key={i}
-            src={src}
-            alt="makeup-landing"
-            fill
-            priority
-            style={{
-              objectFit: "cover",
-              objectPosition: objectPositions[i],
-              opacity: i === bgIndex ? 1 : 0,
-              transition: "opacity 2s ease-in-out",
-            }}
-          />
-        );
-      })}
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden text-white">
+      {/* Background images */}
+      {backgroundImages.map((src, i) => (
+        <Image
+          key={i}
+          src={src}
+          alt="makeup-landing"
+          fill
+          priority
+          style={{
+            objectFit: "cover",
+            objectPosition: objectPositions[i],
+            opacity: i === bgIndex ? 1 : 0,
+            transition: "opacity 2s ease-in-out",
+          }}
+        />
+      ))}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-5 pointer-events-none" />
 
       {/* Foreground content */}
-      <div className="relative z-10 text-left text-white pl-16 pr-8 max-w-3xl">
-        <h1 className={`text-7xl leading-tight whitespace-pre-line font-extrabold ${montserrat.className}`}>
+      <div
+        className={`relative z-10 flex flex-col items-center text-center px-6 sm:px-10 md:px-16 lg:pl-16 lg:items-start lg:text-left max-w-3xl`}
+      >
+        <h1
+          className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-extrabold ${montserrat.className}`}
+        >
           A look that feels effortlessly you.
         </h1>
-        <p className={`mt-4 text-xl font-light max-w-lg ${montserrat.className}`}>
-          Creating flawless looks that feel authentic, unforgettable, and completely yours.
+
+        <p
+          className={`mt-4 text-base sm:text-lg md:text-xl font-light ${montserrat.className}`}
+        >
+          Creating flawless looks that feel authentic, unforgettable, and
+          completely yours.
         </p>
-        <Button className={`mt-6 p-8 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-bold ${montserrat.className}`} style={{ backgroundColor: "#FF99BD" }}>
+
+        <Button
+          className={`mt-6 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-bold ${montserrat.className}`}
+          style={{ backgroundColor: "#FF99BD" }}
+        >
           Book Your Look
         </Button>
       </div>

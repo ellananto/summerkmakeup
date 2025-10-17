@@ -1,18 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: "italic",
-  display: "swap",
-});
-
-export default function Contact() {
+export default function PortfolioHero() {
   const ref = useRef(null);
 
   // Track scroll progress on the hero section
@@ -24,30 +16,68 @@ export default function Contact() {
   // Move image slower than scroll (parallax)
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
+  // Load Tally script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://tally.so/widgets/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className="relative">
-      {/* Parallax Hero Image */}
-      <div ref={ref} className="relative w-full h-[80vh] overflow-hidden">
+    <div>
+      {/* Hero Section */}
+      <div ref={ref} className="relative w-full h-screen overflow-hidden">
+        {/* Fullscreen Parallax Image */}
         <motion.div style={{ y }} className="absolute inset-0">
           <Image
-            src="/collage/just-makeup.jpg"
-            alt="Services Hero"
+            src="/collage/shoot4.jpg"
+            alt="Portfolio Hero"
             fill
-            style={{ objectFit: "cover", objectPosition: "bottom", filter: "brightness(0.7)" }}
+            style={{
+              objectFit: "cover",
+              objectPosition: "top",
+              filter: "brightness(0.5)",
+            }}
             priority
           />
         </motion.div>
 
-        {/* Centered Oval */}
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className="bg-red-700 text-white text-2xl sm:text-3xl md:text-6xl font-bold italic px-12 py-3 rounded-full shadow-lg">
+        {/* Centered Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4 text-center">
+          <p
+            className="text-xl sm:text-3xl md:text-6xl text-white"
+            style={{ fontFamily: "DarlineScript, sans-serif" }}
+          >
+            So excited to hear from you!
+          </p>
+          <h1
+            className="text-4xl sm:text-6xl md:text-[12rem] font-bold text-white break-words"
+            style={{ fontFamily: "DarlineSerif, sans-serif" }}
+          >
             Contact
-          </div>
+          </h1>
         </div>
       </div>
 
-      {/* Main content */}
-      <div className="relative z-10 bg-white">
+      {/* Form Section */}
+      <div className="relative z-10 flex justify-center py-16 px-4 sm:px-6">
+        <div className="w-full max-w-4xl h-[60vh] sm:h-[70vh] md:h-[80vh] rounded-lg overflow-hidden shadow-lg bg-gray-50">
+          <iframe
+            data-tally-src="https://tally.so/r/woWVrx?transparentBackground=1"
+            className="w-full h-full"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            title="Makeup Inquiry"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
