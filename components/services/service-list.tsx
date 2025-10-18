@@ -2,7 +2,7 @@
 import { Montserrat } from "next/font/google";
 import { BookHeart, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,17 +16,11 @@ export default function ServiceList() {
 
   return (
     <>
-      <style jsx global>{`
-        body {
-          overflow-x: visible !important;
-        }
-      `}</style>
-
-      <div className="flex flex-col md:flex-row w-full min-h-screen service-page overflow-x-visible">
+      <div className="flex flex-col md:flex-row w-full h-auto overflow-x-clip">
         {/* Left side (pinned on desktop, stacked on mobile) */}
-        <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col justify-center items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8">
+        <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8 py-10 overflow-x-visible">
           <h2
-            className="text-6xl sm:text-8xl text-red-700 text-center pt-10 pb-4"
+            className="text-6xl sm:text-8xl text-red-700 text-center mb-4"
             style={{ fontFamily: "DarlineScript, sans-serif" }}
           >
             Pricing
@@ -34,9 +28,9 @@ export default function ServiceList() {
           <Image
             src="/collage/shoot1.jpg"
             alt="Static Left"
-            width={500} // desktop width
-            height={500} // desktop height
-            className="mb-10 mt-5 w-full max-w-[00px] sm:max-w-[400px] xs:max-w-[250px] object-cover"
+            width={400}
+            height={400}
+            className="mb-10 mt-5 w-full max-w-[400px] object-cover"
           />
         </div>
 
@@ -47,7 +41,7 @@ export default function ServiceList() {
           {/* Your sections remain the same */}
           {/* Events */}
           <section className="h-[70h] flex flex-col text-left bg-red-700 border-b-2 border-black text-white">
-            <div className="mx-10 mb-10">
+            <div className="px-10 mb-10">
               <h1
                 className="text-6xl pb-5 pt-6 font-bold text-center tracking-wider"
                 style={{ fontFamily: "DarlineSerif, sans-serif" }}
@@ -75,7 +69,7 @@ export default function ServiceList() {
 
           {/* Bridal Pricing */}
           <section className="h-auto flex flex-col text-left bg-white text-red-700">
-            <div className="mx-10 mb-10">
+            <div className="px-10 mb-10">
               <button
                 onClick={() => setShowBridal(!showBridal)}
                 className="w-full flex justify-between items-center py-5"
@@ -151,13 +145,13 @@ export default function ServiceList() {
 
           {/* Wedding Party Pricing */}
           <section className="h-auto flex flex-col text-left bg-white border-b-2 border-black text-red-700">
-            <div className="mx-10 mb-10">
+            <div className="px-10 mb-10">
               <button
                 onClick={() => setShowWedding(showWedding)}
                 className="w-full flex justify-between items-center py-5"
               >
                 <h1
-                  className="text-6xl font-bold text-center w-full tracking-wider font-bold"
+                  className="text-6xl text-center w-full tracking-wider font-bold"
                   style={{ fontFamily: "DarlineSerif, sans-serif" }}
                 >
                   Wedding Party
@@ -227,7 +221,7 @@ export default function ServiceList() {
 
           {/* Commercial */}
           <section className="h-[70h] flex flex-col bg-red-700 text-white border-b-2 border-black">
-            <div className="mx-10 mb-10">
+            <div className="px-10 mb-10">
               <h1
                 className="text-6xl font-bold py-5 text-center tracking-wider"
                 style={{ fontFamily: "DarlineSerif, sans-serif" }}

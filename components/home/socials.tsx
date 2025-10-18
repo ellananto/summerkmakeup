@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import { Button } from "../ui/button";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import Link from "next/link";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -54,15 +55,20 @@ export default function Socials() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 mt-4 sm:mt-6 w-full sm:w-auto items-center justify-center">
           <Button className="bg-white py-4 px-12 sm:py-6 sm:px-16 md:p-8 md:px-20 font-medium text-base sm:text-lg text-red-600 hover:scale-105 transition-transform duration-300 hover:cursor-pointer hover:bg-red-700 hover:text-white w-3/4 sm:w-auto">
-            INSTAGRAM
+            <Link
+              href="https://www.instagram.com/summerkmakeup/"
+              target="_blank"
+            >
+              INSTAGRAM
+            </Link>
           </Button>
 
           <Button className="bg-red-700 py-4 px-12 sm:py-6 sm:px-16 md:p-8 md:px-20 font-medium text-base sm:text-lg text-white hover:scale-105 transition-transform duration-300 hover:cursor-pointer hover:bg-white hover:text-red-700 w-3/4 sm:w-auto">
-            BOOK NOW
+            <Link href="/contact">BOOK NOW</Link>
           </Button>
 
           <Button className="bg-white py-4 px-12 sm:py-6 sm:px-16 md:p-8 md:px-20 font-medium text-base sm:text-lg text-red-600 hover:scale-105 transition-transform duration-300 hover:cursor-pointer hover:bg-red-700 hover:text-white w-3/4 sm:w-auto">
-            TIKTOK
+            <Link href="https://www.tiktok.com/@sumshine7" target="_blank">TIKTOK</Link>
           </Button>
         </div>
       </div>

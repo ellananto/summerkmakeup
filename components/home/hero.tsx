@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -72,7 +73,8 @@ function HeroLanding() {
           className={`mt-6 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-bold ${montserrat.className}`}
           style={{ backgroundColor: "#FF99BD" }}
         >
-          Book Your Look
+          <Link href="/contact">Book Your Look</Link>
+          
         </Button>
       </div>
     </div>

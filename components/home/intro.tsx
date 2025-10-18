@@ -45,7 +45,9 @@ export function Intro() {
         <p className={`text-base sm:text-lg mb-6 ${montserrat.className}`}>
           Does any of this sound familiar? You are not alone!
         </p>
-        <ul className={`${montserrat.className} space-y-3 text-base sm:text-lg`}>
+        <ul
+          className={`${montserrat.className} space-y-3 text-base sm:text-lg`}
+        >
           {[
             "Worried your makeup will look too heavy or unnatural?",
             "Frustrated when makeup fades before the night is over?",
@@ -61,15 +63,15 @@ export function Intro() {
         <p className={`text-base sm:text-lg mt-6 ${montserrat.className}`}>
           Summer K Makeup solves all of these by creating a{" "}
           <span className="italic">personalized, lasting </span>
-          look that enhances your natural beauty and makes you feel
-          confident and comfortable.
+          look that enhances your natural beauty and makes you feel confident
+          and comfortable.
         </p>
       </div>
 
       {/* Right side: parallax image */}
       <div
         ref={ref}
-        className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-[80vh] overflow-hidden mt-6 md:mt-0 shadow-lg"
+        className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-[80vh] overflow-hidden mt-6 md:mt-0 shadow-lg md:mr-10"
       >
         <motion.div
           style={{ y }}
