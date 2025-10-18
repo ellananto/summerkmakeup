@@ -27,12 +27,12 @@ export default function ServiceList() {
           </h2>
 
           {/* Image container */}
-          <div className="w-[300px] sm:w-[350px] md:w-[300px] max-w-full mt-5 mb-10">
+          <div className="w-[350px] sm:w-[400px] md:w-[350px] max-w-full mt-5 mb-10">
             <Image
               src="/collage/shoot1.jpg"
               alt="Static Left"
-              width={300}
-              height={300} // locks height proportional to width
+              width={350}
+              height={350} // slightly bigger than before
               className="object-cover w-full h-auto border-2 border-black"
               priority
             />
