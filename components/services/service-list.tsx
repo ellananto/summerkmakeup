@@ -18,7 +18,7 @@ export default function ServiceList() {
     <>
       <div className="flex flex-col md:flex-row w-full h-auto overflow-x-clip">
         {/* Left side (pinned on desktop, stacked on mobile) */}
-        <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8 pt-5">
+        <div className="w-full md:w-1/2 md:h-screen md:sticky md:top-0 flex flex-col items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8 pt-5">
           <h2
             className="text-6xl sm:text-8xl text-red-700 text-center my-5"
             style={{ fontFamily: "DarlineScript, sans-serif" }}
@@ -26,15 +26,15 @@ export default function ServiceList() {
             Pricing
           </h2>
 
-          <div className="w-full max-w-[365px] mt-5 mb-10">
+          {/* Image container */}
+          <div className="w-[300px] sm:w-[350px] md:w-[300px] max-w-full mt-5 mb-10">
             <Image
               src="/collage/shoot1.jpg"
               alt="Static Left"
               width={300}
-              height={300}
+              height={300} // locks height proportional to width
               className="object-cover w-full h-auto border-2 border-black"
               priority
-              sizes="(max-width: 365px) 80vw, 365px"
             />
           </div>
         </div>
