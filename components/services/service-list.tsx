@@ -31,10 +31,10 @@ export default function ServiceList() {
               src="/collage/shoot1.jpg"
               alt="Static Left"
               width={300}
-              height={300} // shorter height
+              height={300}
               className="object-cover w-full h-auto border-2 border-black"
               priority
-              sizes="(max-width: 768px) 80vw, 400px"
+              sizes="(max-width: 365px) 80vw, 365px"
             />
           </div>
         </div>
