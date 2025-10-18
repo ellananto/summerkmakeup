@@ -14,18 +14,18 @@ export default function Details() {
     <div className="flex flex-col md:flex-row w-full h-auto overflow-x-visible">
       {/* Right side image (mobile first) */}
       <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col justify-center items-center bg-gray-100 border-b-2 border-black order-1 md:order-2 px-4 sm:px-8">
-        <h2
-          className="text-6xl sm:text-8xl text-red-700 text-center pt-10 pb-4"
-          style={{ fontFamily: "DarlineScript, sans-serif" }}
-        >
-          Details
-        </h2>
+          <h2
+            className="text-6xl sm:text-8xl text-red-700 text-center mt-5"
+            style={{ fontFamily: "DarlineScript, sans-serif" }}
+          >
+            Details
+          </h2>
         <Image
           src="/collage/shoot3.jpg"
           alt="Static Right"
-          width={400}
-          height={400}
-          className="mb-10 mt-5 w-full max-w-md object-cover"
+          width={370}
+          height={370}
+          className="mb-10 mt-5 max-w-md object-cover border-2 border-black"
         />
       </div>
 
