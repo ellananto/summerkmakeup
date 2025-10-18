@@ -14,19 +14,22 @@ export default function Details() {
     <div className="flex flex-col md:flex-row w-full h-auto overflow-x-visible">
       {/* Right side image (mobile first) */}
       <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col justify-center items-center bg-gray-100 border-b-2 border-black order-1 md:order-2 px-4 sm:px-8">
-          <h2
-            className="text-6xl sm:text-8xl text-red-700 text-center mt-5"
-            style={{ fontFamily: "DarlineScript, sans-serif" }}
-          >
-            Details
-          </h2>
-        <Image
-          src="/collage/shoot3.jpg"
-          alt="Static Right"
-          width={370}
-          height={370}
-          className="mb-10 mt-5 max-w-md object-cover border-2 border-black"
-        />
+        <h2
+          className="text-6xl sm:text-8xl text-red-700 text-center mt-5"
+          style={{ fontFamily: "DarlineScript, sans-serif" }}
+        >
+          Details
+        </h2>
+        <div className="w-[325px] sm:w-[375px] md:w-[325px] max-w-full mt-5 mb-10 mx-auto">
+          <Image
+            src="/collage/shoot3.jpg"
+            alt="Static Right"
+            width={370}
+            height={370}
+            className="object-cover w-full h-auto border-2 border-black"
+            priority
+          />
+        </div>
       </div>
 
       {/* Left side content (Policies, Fees, Location) */}
