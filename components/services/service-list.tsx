@@ -18,20 +18,25 @@ export default function ServiceList() {
     <>
       <div className="flex flex-col md:flex-row w-full h-auto overflow-x-clip">
         {/* Left side (pinned on desktop, stacked on mobile) */}
-        <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8 py-10 overflow-x-visible">
+        <div className="w-full md:w-1/2 h-auto md:h-screen md:sticky md:top-0 flex flex-col items-center bg-gray-100 border-b-2 border-black px-4 sm:px-8 py-10">
           <h2
             className="text-6xl sm:text-8xl text-red-700 text-center mb-4"
             style={{ fontFamily: "DarlineScript, sans-serif" }}
           >
             Pricing
           </h2>
-          <Image
-            src="/collage/shoot1.jpg"
-            alt="Static Left"
-            width={400}
-            height={400}
-            className="mb-10 mt-5 w-full max-w-[400px] object-cover"
-          />
+
+          <div className="w-full max-w-[400px] mt-5 mb-10">
+            <Image
+              src="/collage/shoot1.jpg"
+              alt="Static Left"
+              width={400}
+              height={600}
+              className="object-cover w-full h-auto"
+              priority
+              sizes="(max-width: 768px) 80vw, 400px"
+            />
+          </div>
         </div>
 
         {/* Right side (scrolling) */}
