@@ -1,59 +1,123 @@
+"use client";
+
+import * as React from "react";
+import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "700"],
   display: "swap",
 });
 
-const testimonials = [
-  {
-    text: "Thank you so much for yesterday. I really appreciaite it! You did a great job and I felt so beautiful. ",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "",
-  },
-  {
-    text: "Hey, I just wanted to say thank you again so much for coming to do my makeup. It lasted the entire night, all the way until literally 4 AM haha and I felt so beautiful!! It was so fun meeting you! ",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-    name: "Bilal Ahmed",
-  },
-  {
-    text: "Hi!! Summer was absolutely darling! We had a really hard time finding someone who was right to do our wedding party's makeup and wow she hit all of the marks!! So so sweet and had so much fun talking to her while she was doing my makeup. She did an amazing job on my makeup and all the girls makeup including doing an amazing job on the bride's makeup (my sisters)!! I definitely recommend Summer.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
-    name: "Avery Richardson",
-  },
-  {
-    text: "Summer is the best! She came prepared with everything she needed and she listened to what I wanted. She explained what she was doing throughout the process and did well making great conversation. She created my perfect dream look! Totally book with her!",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
-    name: "Sage Keaton",
-  },
-  {
-    text: "Summer is so kind. She's a fantastic makeup artist, she did my wedding makeup + my bridesmaids and my mom. We all felt so beautiful. She gave me excactly what I asked for and listened to me when I wanted to change things. I will recommend her always. {'<3'}",
-    image: "https://randomuser.me/api/portraits/women/5.jpg",
-    name: "Dakota Navarro",
-  },
-  {
-    text: "Summer has such an artistic eye! She always creates the most stunning looks. She helped my mom and I get glammed up for some album cover shots and it was a blast! Thanks Summer!",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-    name: "Ivana Young",
-  },
-  {
-    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
-    name: "Farhan Siddiqui",
-  },
-  {
-    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
-    image: "https://randomuser.me/api/portraits/women/8.jpg",
-    name: "Sana Sheikh",
-  },
-  {
-    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
-    name: "Hassan Ali",
-  },
-];
+export function CarouselSize() {
+  const testimonialImages = [
+    "/testimonials/t1.png",
+    "/testimonials/t3.png",
+    "/testimonials/t2.png",
+    "/testimonials/t4.png",
+    "/testimonials/t5.png",
+  ];
 
-export default function Testimonial() {
-  return <section className="my-10 relative"></section>;
+  return (
+    <div className="relative overflow-hidden">
+      {/* Desktop decorative images */}
+      <div className="hidden md:block absolute left-10 top-20 rotate-12 z-0">
+        <Image
+          src="/testimonials/cherry.png"
+          alt="Cherry"
+          width={160}
+          height={160}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="hidden md:block absolute right-10 bottom-1 rotate-6 z-0">
+        <Image
+          src="/testimonials/lipmark.png"
+          alt="Lipmark"
+          width={130}
+          height={130}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Mobile cherry at the top */}
+      <div className="flex justify-center mt-10 md:hidden">
+        <Image
+          src="/testimonials/cherry.png"
+          alt="Cherry"
+          width={100}
+          height={100}
+          className="object-cover"
+        />
+      </div>
+
+      {/* Text content */}
+      <div className="flex flex-col items-center justify-center text-center pt-10 relative z-10">
+        <h2
+          className="mx-4 text-3xl sm:text-5xl lg:text-7xl text-black mt-4 font-bold"
+          style={{ fontFamily: "DarlineScript, sans-serif" }}
+        >
+          The Reviews Are In!
+        </h2>
+        <h3
+          className={`mx-4 text-base sm:text-lg text-black mt-2 ${montserrat.className}`}
+        >
+          See why everyone&apos;s so obsessed.
+        </h3>
+      </div>
+
+      {/* Carousel */}
+      <div className="flex items-center justify-center mt-10 relative z-10">
+        <Carousel
+          opts={{ align: "start" }}
+          className="w-full max-w-6xl px-4 sm:px-8"
+        >
+          <CarouselContent>
+            {testimonialImages.map((src, index) => (
+              <CarouselItem
+                key={index}
+                className={`
+                  basis-full sm:basis-1/2 lg:basis-1/3 px-2
+                  ${index === 0 ? "pl-4" : ""}
+                  ${index === testimonialImages.length - 1 ? "pr-4" : ""}
+                `}
+              >
+                <div className="flex justify-center">
+                  <Image
+                    src={src}
+                    alt={`testimonial ${index + 1}`}
+                    width={300}
+                    height={300}
+                    className="rounded-xl mt-2 border-2 border-black w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-20" />
+          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-20" />
+        </Carousel>
+      </div>
+
+      {/* Mobile lipmark at the bottom */}
+      <div className="flex justify-center mt-10 md:hidden mb-8">
+        <Image
+          src="/testimonials/lipmark.png"
+          alt="Lipmark"
+          width={80}
+          height={80}
+          className="object-cover"
+        />
+      </div>
+    </div>
+  );
 }

@@ -86,10 +86,10 @@ export function Footer() {
           {/* Center text */}
           <div className="flex flex-col items-center justify-center space-y-2 mt-12 text-center">
             <h1
-              className={`text-4xl sm:text-6xl md:text-8xl font-bold italic ${montserrat.className} break-words`}
-              style={{ color: "#FFADCA" }}
+              className={`text-4xl sm:text-6xl md:text-8xl font-bold italicbreak-words`}
+              style={{ color: "#FFADCA", fontFamily: "DarlineScript, sans-serif" }}
             >
-              summer k makeup
+              Summer K&nbsp;&nbsp;Makeup
             </h1>
             <Link
               href="https://www.linkedin.com/in/ella-nanto/"

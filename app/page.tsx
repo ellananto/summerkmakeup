@@ -4,6 +4,7 @@ import { Intro } from "@/components/home/intro";
 import MeetSummer from "@/components/home/meet";
 import PortfolioMini from "@/components/home/portfolio";
 import Socials from "@/components/home/socials";
+import { CarouselSize } from "@/components/home/testimonials";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <MeetSummer />
         <PortfolioMini />
         <Socials />
+        <CarouselSize />
       </div>
     </>
   );
