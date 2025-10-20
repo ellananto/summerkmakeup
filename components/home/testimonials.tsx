@@ -24,6 +24,9 @@ export function CarouselSize() {
     "/testimonials/t2.png",
     "/testimonials/t4.png",
     "/testimonials/t5.png",
+    "/testimonials/t6.png",
+    "/testimonials/t7.png",
+    "/testimonials/t8.png",
   ];
 
   return (
@@ -79,7 +82,7 @@ export function CarouselSize() {
       <div className="flex items-center justify-center mt-10 relative z-10">
         <Carousel
           opts={{ align: "start" }}
-          className="w-full max-w-6xl px-4 sm:px-8"
+          className="w-full max-w-5xl px-4 sm:px-8"
         >
           <CarouselContent>
             {testimonialImages.map((src, index) => (
@@ -97,7 +100,7 @@ export function CarouselSize() {
                     alt={`testimonial ${index + 1}`}
                     width={300}
                     height={300}
-                    className="rounded-xl mt-2 border-2 border-black w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain"
+                    className="rounded-xl ml-4 max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain "
                   />
                 </div>
               </CarouselItem>
@@ -115,7 +118,7 @@ export function CarouselSize() {
           alt="Lipmark"
           width={80}
           height={80}
-          className="object-cover"
+          className="object-cover ml-2"
         />
       </div>
     </div>
