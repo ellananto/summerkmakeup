@@ -30,18 +30,30 @@ export function CarouselSize() {
   ];
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Desktop decorative images */}
-      <div className="hidden md:block absolute left-10 top-20 rotate-12 z-0">
+    <div className="relative overflow-hidden pt-15">
+      {/* 🖥️ Desktop heels (left-aligned) */}
+      <div className="hidden md:block absolute left-10 -top-0 rotate-180 z-20">
         <Image
-          src="/testimonials/cherry.png"
-          alt="Cherry"
-          width={160}
-          height={160}
-          className="w-full h-full object-cover"
+          src="/testimonials/heels2.png"
+          alt="Heels"
+          width={200}
+          height={200}
+          className="object-cover"
         />
       </div>
 
+      {/* 📱 Mobile heels (centered) */}
+      <div className="md:hidden absolute inset-x-0 -top-0 flex justify-center z-20">
+        <Image
+          src="/testimonials/heels2.png"
+          alt="Heels"
+          width={120}
+          height={120}
+          className="object-cover rotate-180"
+        />
+      </div>
+
+      {/* 🖥️ Desktop lipmark bottom-right */}
       <div className="hidden md:block absolute right-10 bottom-1 rotate-6 z-0">
         <Image
           src="/testimonials/lipmark.png"
@@ -52,19 +64,14 @@ export function CarouselSize() {
         />
       </div>
 
-      {/* Mobile cherry at the top */}
-      <div className="flex justify-center mt-10 md:hidden">
-        <Image
-          src="/testimonials/cherry.png"
-          alt="Cherry"
-          width={100}
-          height={100}
-          className="object-cover"
-        />
-      </div>
-
       {/* Text content */}
-      <div className="flex flex-col items-center justify-center text-center pt-10 relative z-10">
+      <div
+        className={`
+          flex flex-col items-center justify-center text-center relative z-10
+          pt-40 md:pt-10
+          sm:pt-[5rem]  /* adds ~20px extra space on small screens */
+        `}
+      >
         <h2
           className="mx-4 text-3xl sm:text-5xl lg:text-7xl text-black mt-4 font-bold"
           style={{ fontFamily: "DarlineScript, sans-serif" }}
@@ -100,7 +107,7 @@ export function CarouselSize() {
                     alt={`testimonial ${index + 1}`}
                     width={300}
                     height={300}
-                    className="rounded-xl ml-4 max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain "
+                    className="rounded-xl ml-4 max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain"
                   />
                 </div>
               </CarouselItem>
@@ -111,7 +118,7 @@ export function CarouselSize() {
         </Carousel>
       </div>
 
-      {/* Mobile lipmark at the bottom */}
+      {/* 📱 Mobile lipmark bottom */}
       <div className="flex justify-center mt-10 md:hidden mb-8">
         <Image
           src="/testimonials/lipmark.png"

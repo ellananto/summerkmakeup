@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
+import Link from "next/link";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -11,69 +12,102 @@ const montserrat = Montserrat({
 
 export default function Spotlight() {
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
-      {/* Title Section */}
-      <div className="flex items-center justify-center flex-wrap text-center">
-        <div className="w-12 sm:w-16 h-[1px] bg-black"></div>
-        <h2
-          className="mx-4 text-4xl sm:text-6xl lg:text-8xl text-black mt-2 sm:mt-0"
-          style={{ fontFamily: "DarlineScript, sans-serif" }}
-        >
-          Client Spotlight
-        </h2>
-        <div className="w-12 sm:w-16 h-[1px] bg-black"></div>
-        
-      </div>
-      <div className="flex items-center justify-center pt-10 pb-5">
-                <h2
-          className="mx-4 text-3xl sm:text-4xl lg:text-5xl text-black mt-2 sm:mt-0"
-          style={{ fontFamily: "DarlineSerif, sans-serif" }}
-        >
-          KAMRYN FRANKE
-        </h2>
-      </div>
-
-      {/* Subtitle */}
-      <p
-        className={`mt-4 sm:mt-6 text-center text-black text-base sm:text-lg lg:text-xl font-light leading-relaxed ${montserrat.className}`}
+    <div
+      className="w-full mx-auto bg-white text-black p-6 font-serif mb-20"
+      style={{ fontFamily: "DarlineSerif, sans-serif" }}
+    >
+      {/* Top Title */}
+      <h1
+        className="text-[7.5rem] text-left border-b-2 border-black pb-2 tracking-wider"
+        style={{ fontFamily: "DarlineScript, sans-serif" }}
       >
-        One of our stunning brides made it all the way to{" "}
-        <em>PEOPLE Magazine</em>! We’re still swooning over her look.
-      </p>
+        Breaking News!
+      </h1>
 
-      {/* Spotlight Images */}
-      <div className="flex justify-center items-end gap-4 sm:gap-8 pt-10 pb-24 sm:pb-40 flex-wrap">
-        {/* Left Image */}
-        <div className="relative w-40 sm:w-56 md:w-64 aspect-[3/4] overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:cursor-pointer">
-          <Image
-            src="/portfolio-2/spotlight2.jpg"
-            alt="Client Spotlight Left"
-            fill
-            style={{ objectFit: "cover" }}
-            loading="lazy"
-          />
+      {/* Subline */}
+      <div className="flex justify-between text-2xl mb-2 uppercase tracking-wider border-b-2 border-black pb-2">
+        <span>{new Date().toLocaleDateString()}</span>
+        <span>Special Edition</span>
+        <span>Summer K Makeup</span>
+      </div>
+
+      {/* Main Headline */}
+      <h2 className="text-[6rem] text-center tracking-widest">
+        CLIENT SPOTLIGHT
+      </h2>
+      <h2 className="text-7xl text-center mb-10" style={{ fontFamily: "DarlineScript, sans-serif" }}>
+       Kamryn Franke
+      </h2>
+
+      {/* Main Content */}
+      <div
+        className={`grid grid-cols-1 md:grid-cols-9 gap-10 items-start ${montserrat.className}`}
+      >
+        {/* Left Image (1/3) */}
+        <div className="col-span-3 flex justify-center">
+          <Link href="https://people.com/ruby-franke-son-chad-marries-kamryn-anderson-11829063/" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/portfolio-2/spotlight1.jpg"
+              alt="Kamryn Franke"
+              width={400}
+              height={500}
+              className="object-cover shadow-md w-full h-auto ml-5"
+            />
+          </Link>
         </div>
 
-        {/* Center Image */}
-        <div className="relative w-56 sm:w-72 md:w-96 aspect-[3/4] overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 hover:cursor-pointer z-10">
-          <Image
-            src="/portfolio-2/spotlight1.jpg"
-            alt="Client Spotlight Center"
-            fill
-            style={{ objectFit: "cover" }}
-            loading="lazy"
-          />
-        </div>
+        {/* Right 2/3 Section */}
+        <div className="col-span-6 flex flex-col">
+          {/* Top row of the right side */}
+          <div className="grid grid-cols-6 gap-10">
+            {/* Left Text (2/6) */}
+            <div className="col-span-2 space-y-6 text-xl leading-relaxed text-justify">
+              <p>
+                Chad Franke and Kamryn Anderson’s wedding was a stunning blend
+                of romance and style, filled with joy, elegance, and heartfelt
+                moments that captured the essence of their relationship. Set
+                against a picturesque backdrop, the day felt like a scene from a
+                modern love story — emotional, refined, and deeply personal.
+                Surrounded by family and friends, the couple celebrated in a way
+                that was both intimate and cinematic, a true reflection of their
+                love.
+              </p>
+            </div>
 
-        {/* Right Image */}
-        <div className="relative w-40 sm:w-56 md:w-64 aspect-[3/4] overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:cursor-pointer">
-          <Image
-            src="/portfolio-2/spotlight3.jpg"
-            alt="Client Spotlight Right"
-            fill
-            style={{ objectFit: "cover" }}
-            loading="lazy"
-          />
+            {/* Center Quote (2/6) */}
+            <div className="col-span-2 flex flex-col justify-center items-center text-center border-x-2 border-black px-6 py-12">
+              <blockquote className="text-4xl italic font-bold leading-snug">
+                “Summer gave me the confidence to feel like myself on the best
+                day of my life.”
+              </blockquote>
+              <span
+                className="block mt-6 text-3xl  tracking-wider"
+                style={{ fontFamily: "DarlineScript, sans-serif" }}
+              >
+                - Kamryn Franke
+              </span>
+            </div>
+
+            {/* Right Text (2/6) */}
+            <div className="col-span-2 space-y-6 text-xl leading-relaxed text-justify">
+              <p>
+                Behind the scenes, the wedding’s atmosphere was elevated by the
+                artistry of Summer K Makeup, whose touch brought elegance and
+                cohesion to the entire event. Kamryn’s soft, luminous bridal
+                glow — paired with subtle highlights and a seamless finish — set
+                the tone for the day’s photos and aesthetic. The expert
+                coordination of makeup, hair, and lighting transformed the
+                celebration in a timeless and personally polished way.
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="mt-5 text-center text-xl  tracking-widest rounded-lg p-3 shadow-lg bg-black"
+            style={{ fontFamily: "DarlineSerif, sans-serif", color: "white" }}
+          >
+            SPONSORED BY: SUMMER K MAKEUP
+          </div>
         </div>
       </div>
     </div>

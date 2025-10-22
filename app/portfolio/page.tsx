@@ -7,6 +7,7 @@ import { useRef } from "react";
 import Gallery from "@/components/portfolio/gallery";
 import Gallery2 from "@/components/portfolio/gallery2";
 import Spotlight from "@/components/portfolio/spotlight";
+import Gallery1 from "@/components/portfolio/gallery1";
 
 export default function Portfolio() {
   const ref = useRef(null);
@@ -58,10 +59,10 @@ export default function Portfolio() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 mt-16 sm:mt-20">
-        <Gallery2 />
-        <Gallery />
+      <div className="relative z-10">
         <Spotlight />
+        <Gallery2 />
+        <Gallery1 />
         <div className="pt-8 sm:pt-12">
           <Socials />
         </div>
