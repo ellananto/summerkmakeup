@@ -4,10 +4,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Socials from "@/components/home/socials";
 import Image from "next/image";
 import { useRef } from "react";
-import Gallery from "@/components/portfolio/gallery";
+import Gallery1 from "@/components/portfolio/gallery1";
 import Gallery2 from "@/components/portfolio/gallery2";
 import Spotlight from "@/components/portfolio/spotlight";
-import Gallery1 from "@/components/portfolio/gallery1";
 
 export default function Portfolio() {
   const ref = useRef(null);

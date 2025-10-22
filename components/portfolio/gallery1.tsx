@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 function Gallery1() {
   return (
-    <div className="block overflow-x-hidden">
+    <div className="block overflow-x-hidden pt-10">
       <div className="flex items-center justify-center flex-wrap text-center">
         <div className="w-12 sm:w-16 h-[1px] bg-red-700"></div>
         <h2

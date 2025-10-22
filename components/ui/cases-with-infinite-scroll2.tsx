@@ -41,7 +41,7 @@ function Case2({ images }: CaseProps) {
   }, [api, current]);
 
   return (
-    <div className={`w-full py-10 sm:py-16 lg:py-10 ${montserrat.className}`}>
+    <div className={`w-full py-1 sm:py-1 lg:py-1 ${montserrat.className}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Carousel */}
         <Carousel setApi={setApi} className="w-full py-8 sm:py-12">
