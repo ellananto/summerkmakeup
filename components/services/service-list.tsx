@@ -152,7 +152,7 @@ export default function ServiceList() {
           <section className="h-auto flex flex-col text-left bg-white border-b-2 border-black text-red-700">
             <div className="px-10 mb-10">
               <button
-                onClick={() => setShowWedding(showWedding)}
+                onClick={() => setShowWedding(!showWedding)}
                 className="w-full flex justify-between items-center py-5"
               >
                 <h1
