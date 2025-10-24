@@ -54,12 +54,12 @@ function MeetSummer() {
           it’s everyday makeup or special occasions, Summer has you covered.
         </p>
         <div className="text-center">
-          <Link href="/about">
+          <Link href="/contact">
             <Button
               className={`mt-6 p-6 text-lg text-center rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
               style={{ backgroundColor: "#b91c1c" }}
             >
-              Learn More
+              Book With Summer!
             </Button>
           </Link>
         </div>

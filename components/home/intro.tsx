@@ -30,16 +30,16 @@ export function Intro() {
       <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-10 md:px-16 h-auto md:h-[80vh] text-center md:text-left">
         <div className="flex flex-col">
           <h1
-            className="text-3xl sm:text-4xl md:text-[8rem] font-thin text-red-700 mb-2"
-            style={{ fontFamily: "DarlineSerif, sans-serif" }}
-          >
-            WELCOME TO
-          </h1>
-          <h1
-            className="text-7xl sm:text-5xl md:text-6xl font-thin text-red-700 mb-5 w-full"
+            className="text-3xl sm:text-4xl md:text-[6rem] font-thin text-red-700 mb-2"
             style={{ fontFamily: "DarlineScript, sans-serif" }}
           >
-            Summer K Makeup
+            Welcome To
+          </h1>
+          <h1
+            className="text-7xl sm:text-5xl md:text-7xl font-thin text-red-700 mb-5 w-full"
+            style={{ fontFamily: "DarlineSerif, sans-serif" }}
+          >
+            SUMMER K MAKEUP
           </h1>
         </div>
         <p className={`text-base sm:text-lg mb-6 ${montserrat.className}`}>

@@ -64,12 +64,12 @@ function Case({ images }: CaseProps) {
             feel effortlessly confident and radiant. And trust me, Summer{" "}
             <span className="italic">always</span> looks good on you.
           </p>
-          <Link href="/portfolio">
+          <Link href="/contact">
             <Button
               className={`mt-4 sm:mt-6 p-4 sm:p-6 text-base sm:text-lg rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
               style={{ backgroundColor: "#b91c1c" }}
             >
-              See Full Portfolio
+              Book Your Look!
             </Button>
           </Link>
         </div>

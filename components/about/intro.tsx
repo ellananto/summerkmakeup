@@ -11,17 +11,19 @@ const montserrat = Montserrat({
 
 export function IntroAbout() {
   return (
-    <div className="relative w-full h-[70vw] sm:h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden pb-20 mb-20">
-      <Image
-        src="/images/aboutMe.jpg"
-        alt="About Me Postcard"
-        fill
-        priority
-        style={{
-          objectFit: "cover",
-          objectPosition: "top",
-        }}
-      />
+    <div className={`${montserrat.className} relative w-full overflow-hidden`}>
+      <div className="relative w-full h-[50vw] sm:h-[60vw] md:h-[80vh] lg:h-screen">
+        <Image
+          src="/images/aboutMe.jpg"
+          alt="About Me Postcard"
+          fill
+          priority
+          style={{
+            objectFit: "cover",
+            objectPosition: "top",
+          }}
+        />
+      </div>
     </div>
   );
 }
