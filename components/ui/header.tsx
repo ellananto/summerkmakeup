@@ -44,11 +44,11 @@ function Header1() {
           ))}
         </div>
 
-        {/* Logo */}
-        <div className="flex justify-center flex-1">
-          <Link href="/" className="no-underline mt-2">
+        {/* Logo */} 
+        <div className="flex justify-center flex-1 mt-4">
+          <Link href="/" className="no-underline">
             <p
-              className="text-6xl cursor-pointer text-white fh-items" style={{ fontFamily: "DarlineScript, sans-serif" }}
+              className="text-6xl cursor-pointer text-white fh-items mt-3" style={{ fontFamily: "DarlineScript, sans-serif" }}
             >
               Summer K&nbsp;&nbsp;Makeup
             </p>

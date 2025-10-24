@@ -35,7 +35,7 @@ function Gallery1() {
           "/portfolio/port12.jpg",
           "/portfolio/port3.jpg",
           "/portfolio/port4.jpg",
-          // "/portfolio/port9.jpg",
+          "/portfolio/port9.jpg",
           "/portfolio/port2.jpg",
           "/portfolio/port5.jpg",
           "/portfolio/port7.jpg",

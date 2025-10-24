@@ -9,16 +9,16 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-export function IntroAbout() {
+export function PictureAbout() {
   return (
-    <div className="relative w-full h-[70vw] sm:h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden pb-20 mb-20">
+    <div className="relative w-full h-[60vw] sm:h-[50vh] md:h-[70vh] lg:h-screen overflow-hidden pb-20 mb-20">
       <Image
-        src="/images/aboutMe.jpg"
-        alt="About Me Postcard"
+        src="/images/picAboutMe.jpg"
+        alt="About Me"
         fill
         priority
         style={{
-          objectFit: "cover",
+          objectFit: "contain",
           objectPosition: "top",
         }}
       />

@@ -114,8 +114,7 @@ export default function Spotlight() {
             className="mt-5 text-center text-lg md:text-xl tracking-widest rounded-lg p-3 shadow-lg bg-black"
             style={{ fontFamily: "DarlineSerif, sans-serif", color: "white" }}
           >
-            SPONSORED BY: 
-              SUMMER K MAKEUP
+            SPONSORED BY: SUMMER K MAKEUP
           </div>
         </div>
       </div>
