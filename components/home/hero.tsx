@@ -56,8 +56,26 @@ function HeroLanding() {
       <div
         className={`relative z-10 flex flex-col items-center text-center px-6 sm:px-10 md:px-16 lg:pl-16 lg:items-start lg:text-left max-w-3xl`}
       >
-        <h1
+        {/* <h1
           className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-extrabold ${montserrat.className}`}
+        >
+          A look that feels effortlessly you.
+        </h1> */}
+
+        {/* <h1
+          className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl}`}
+          style={{
+            fontFamily: "DarlineScript, sans-serif",
+          }}
+        >
+          A look that feels effortlessly you.
+        </h1> */}
+
+        <h1
+          className={`text-4xl tracking-wide sm:text-5xl md:text-[6rem] lg:text-[5rem]}`}
+          style={{
+            fontFamily: "DarlineSerif, sans-serif",
+          }}
         >
           A look that feels effortlessly you.
         </h1>
@@ -74,7 +92,6 @@ function HeroLanding() {
           style={{ backgroundColor: "#FF99BD" }}
         >
           <Link href="/contact">Book Your Look</Link>
-          
         </Button>
       </div>
     </div>

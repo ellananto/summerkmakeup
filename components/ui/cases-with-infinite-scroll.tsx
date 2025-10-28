@@ -66,7 +66,7 @@ function Case({ images }: CaseProps) {
           </p>
           <Link href="/contact">
             <Button
-              className={`mt-4 sm:mt-6 p-4 sm:p-6 text-base sm:text-lg rounded-lg drop-shadow-md hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
+              className={`mt-4 sm:mt-6 p-4 sm:p-6 text-base sm:text-lg rounded-lg drop-shadow-md hover:cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
               style={{ backgroundColor: "#b91c1c" }}
             >
               Book Your Look!

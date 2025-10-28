@@ -6,12 +6,12 @@ function PortfolioMini() {
     <div className="block overflow-x-hidden">
       <Case
         images={[
+          "/images/testim2.jpg",
+          "/images/testim29.jpg",
           "/images/testim4.jpg",
-          "/images/testim8.jpg",
-          "/images/testim5.jpg",
-          "/portfolio-2/IMG_0089.jpg",
+          "/images/testim7.jpg",
           "/portfolio-2/IMG_145.jpg",
-          "/images/testim10.jpg",
+          "/images/testim14.jpg",
         ]}
       />
     </div>

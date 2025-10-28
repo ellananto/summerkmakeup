@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export function IntroAbout() {
   return (
-    <div className={`${montserrat.className} relative w-full overflow-hidden`}>
+    <div className={`${montserrat.className} relative w-full overflow-hidden pb-20`}>
       <div className="relative w-full h-[50vw] sm:h-[60vw] md:h-[80vh] lg:h-screen">
         <Image
           src="/images/aboutMe.jpg"

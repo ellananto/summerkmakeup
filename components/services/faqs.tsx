@@ -16,26 +16,20 @@ const montserrat = Montserrat({
 });
 
 const items = [
-  {
-    id: "1",
-    title: "How far in advance should I book my appointment?",
-    sub: "",
-    content:
-      "It’s best to book at least 4–6 weeks ahead, especially for weddings and busy event seasons. This ensures you get your preferred date and time.",
-  },
+
   {
     id: "3",
     title: "How should I prepare my skin before my appointment?",
     sub: "",
     content:
-      "Arrive with a clean, moisturized face—no makeup. Exfoliating the night before can help your foundation go on smoother.",
+      "Arrive with a clean, moisturized face—no makeup.",
   },
   {
     id: "4",
     title: "How long will my makeup last?",
     sub: "",
     content:
-      "Your makeup is designed to last all day (and night!) with professional products and techniques. For weddings and photoshoots, I also provide touch-up tips to keep you looking flawless, with an option to pay for touch ups when needed.",
+      "Your makeup is designed to last all day (and night!) with professional products and techniques. For bridal makeup, touch up kits are provided. with an option to pay for touch up services if needed.",
   },
   {
     id: "5",
@@ -45,32 +39,11 @@ const items = [
       "You’re welcome to bring any personal products, but I’ll use my professional kit for the best long-lasting results.",
   },
   {
-    id: "6",
-    title: "Do you do makeup for all ages?",
-    sub: "",
-    content:
-      "Yes! From flower girls to adults, I tailor techniques and products to suit each age group.",
-  },
-  {
-    id: "7",
-    title: "Will my makeup photograph well?",
-    sub: "",
-    content:
-      "Absolutely! I specialize in makeup that looks flawless in person and on camera under natural or studio lighting.",
-  },
-  {
     id: "8",
-    title: "Can I request a trial for a hairstyle too?",
+    title: "Can I get a hair stylist through you?",
     sub: "",
     content:
-      "I focus on makeup, but I do have contact with hairstylists I've previous worked with, and can coordinate with your hairstylist to ensure the full look is cohesive for photos and events.",
-  },
-  {
-    id: "10",
-    title: "Do you provide tips for maintaining makeup throughout the day?",
-    sub: "",
-    content:
-      "Yes! I give personalized guidance and tricks to keep your makeup fresh, plus optional touch-up services if needed.",
+      "I am only a makeup artist, but I do have contact with hairstylists I've previous worked with, and can coordinate with your hairstylist to ensure the full look is cohesive for photos and events.",
   },
 ];
 

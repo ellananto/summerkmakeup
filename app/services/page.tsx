@@ -24,12 +24,12 @@ export default function ServicesSplit() {
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <motion.div style={{ y }} className="w-full h-full">
             <Image
-              src="/images/polaroids-socials.jpg"
+              src="/portfolio/servphot.jpg"
               alt="Services Hero"
               fill
               style={{
                 objectFit: "cover",
-                objectPosition: "center 67%",
+                objectPosition: "top",
                 filter: "brightness(0.7)",
               }}
               priority
@@ -48,7 +48,7 @@ export default function ServicesSplit() {
             className="text-5xl md:text-[12rem] font-bold text-white drop-shadow-lg"
             style={{ fontFamily: "DarlineSerif, sans-serif" }}
           >
-            Services
+            Services + Pricing
           </h1>
         </div>
       </div>

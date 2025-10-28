@@ -30,7 +30,7 @@ export function CarouselSize() {
   ];
 
   return (
-    <div className="relative overflow-hidden pt-15">
+    <div className="relative overflow-hidden pt-15 pb-30">
       {/* 🖥️ Desktop heels (left-aligned) */}
       <div className="hidden md:block absolute left-10 -top-0 rotate-180 z-20">
         <Image

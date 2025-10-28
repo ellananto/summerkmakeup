@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 export default function ServiceList() {
   const [showBridal, setShowBridal] = useState(true);
-  const [showWedding, setShowWedding] = useState(false);
+  const [showWedding, setShowWedding] = useState(true); 
 
   return (
     <>
@@ -175,11 +175,11 @@ export default function ServiceList() {
                     <ul className="text-lg">
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Includes 2 makeup services
+                        Includes a 45 minute-1 hour service
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $100 deposit
+                        Requires a $50 deposit
                       </li>
                     </ul>
                   </div>
@@ -193,11 +193,11 @@ export default function ServiceList() {
                     <ul className="text-lg">
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Includes 2 makeup services
+                        Includes 30 minute service
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $100 deposit
+                        Requires a $30 deposit
                       </li>
                     </ul>
                   </div>
@@ -206,16 +206,12 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Flower Girl - $20
+                      Flower Girl - $25
                     </h1>
                     <ul className="text-lg">
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Includes 2 makeup services
-                      </li>
-                      <li className="mb-2 flex items-center gap-2">
-                        <BookHeart />
-                        Requires a $100 deposit
+                        Requires a $10 deposit
                       </li>
                     </ul>
                   </div>

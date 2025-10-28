@@ -16,11 +16,10 @@ export default function Home() {
       `}</style>
       <div className="overflow-x-hidden">
         <HeroLanding />
-        <Intro />
         <MeetSummer />
         <PortfolioMini />
-        <Socials />
         <CarouselSize />
+        <Socials />
       </div>
     </>
   );

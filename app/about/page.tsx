@@ -49,7 +49,6 @@ export default function AboutHero() {
         </div>
       </div>
       <IntroAbout />
-      <PictureAbout />
       <Socials />
     </div>
   );
