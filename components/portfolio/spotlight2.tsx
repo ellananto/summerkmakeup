@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 function Spotlight2() {
   return (
-    <div className="py-20">
+    <div className="py-20 px-4 sm:px-8 lg:px-20">
       <div className="flex items-center justify-center flex-wrap text-center">
         <div className="w-12 sm:w-16 h-[1px] bg-red-700"></div>
         <h2
@@ -26,13 +26,14 @@ function Spotlight2() {
       <p
         className={`mt-4 sm:mt-6 text-center text-red-600 text-base sm:text-lg lg:text-xl font-light leading-relaxed ${montserrat.className}`}
       >
-        We’re over the MOON to have Summer K Makeup featured in People Magazine
+        We’re over the MOON to have Summer K Makeup featured in People Magazine.
         Read below to see the perfect look for our bride&apos;s perfect day!
       </p>
+
       <div
-        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center px-10 sm:px-10 lg:px-10 py-10 lg:py-10 gap-8 overflow-x-hidden`}
+        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 lg:py-10 gap-8`}
       >
-        {/* Top image on mobile / left image on desktop */}
+        {/* Left image */}
         <div className="flex-shrink-0 w-full lg:w-auto">
           <Image
             src="/portfolio-2/spotlight1.jpg"
@@ -43,7 +44,7 @@ function Spotlight2() {
           />
         </div>
 
-        {/* Center text */}
+        {/* Text */}
         <div className="flex-1 w-full text-center lg:text-left px-2 sm:px-4">
           <h2
             className="text-4xl text-center sm:text-4xl lg:text-4xl text-black py-4 flex flex-col tracking-wider items-center lg:items-center"
@@ -74,8 +75,8 @@ function Spotlight2() {
           </p>
           <div className="text-center">
             <Link
-              href="/https://people.com/chad-franke-utah-wedding-kamryn-anderson-photos-exclusive-11829229"
-              target="blank"
+              href="https://people.com/chad-franke-utah-wedding-kamryn-anderson-photos-exclusive-11829229"
+              target="_blank"
             >
               <Button
                 className={`mt-6 p-6 text-lg text-center rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
@@ -87,7 +88,7 @@ function Spotlight2() {
           </div>
         </div>
 
-        {/* Bottom image on mobile / right image on desktop */}
+        {/* Right image */}
         <div className="flex-shrink-0 w-full lg:w-auto mt-6 lg:mt-0">
           <Image
             src="/portfolio-2/spotlight2.jpg"
