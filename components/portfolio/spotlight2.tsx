@@ -12,8 +12,9 @@ const montserrat = Montserrat({
 
 function Spotlight2() {
   return (
-    <div className="py-20 px-4 sm:px-8 lg:px-20">
-      <div className="flex items-center justify-center flex-wrap text-center">
+    <div className="py-20 px-2 lg:px-0">
+      {/* Title */}
+      <div className="flex items-center justify-center flex-wrap text-center mb-6">
         <div className="w-12 sm:w-16 h-[1px] bg-red-700"></div>
         <h2
           className="mx-4 text-4xl sm:text-6xl lg:text-7xl text-red-700 mt-2 sm:mt-0"
@@ -23,6 +24,8 @@ function Spotlight2() {
         </h2>
         <div className="w-12 sm:w-16 h-[1px] bg-red-700"></div>
       </div>
+
+      {/* Description */}
       <p
         className={`mt-4 sm:mt-6 text-center text-red-600 text-base sm:text-lg lg:text-xl font-light leading-relaxed ${montserrat.className}`}
       >
@@ -30,28 +33,30 @@ function Spotlight2() {
         Read below to see the perfect look for our bride&apos;s perfect day!
       </p>
 
+      {/* Spotlight Section */}
       <div
-        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 lg:py-10 gap-8 px-[10px]`}
+        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 gap-8`}
+        style={{ paddingLeft: "10px", paddingRight: "10px" }} // ensures 10px space on each side
       >
         {/* Left image */}
-        <div className="flex-shrink-0 w-full lg:w-auto">
+        <div className="flex-shrink-0" style={{ maxWidth: "450px", padding: "0 10px" }}>
           <Image
             src="/portfolio-2/spotlight1.jpg"
             alt="Summer Left"
             width={450}
             height={650}
-            className="rounded-lg object-cover shadow-xl w-full h-auto"
+            className="rounded-lg object-cover w-full h-auto shadow-xl"
           />
         </div>
 
-        {/* Text */}
-        <div className="flex-1 w-full text-center lg:text-left px-2 sm:px-4">
+        {/* Center text */}
+        <div className="flex-1 text-center lg:text-left px-2 sm:px-4">
           <h2
-            className="text-4xl text-center sm:text-4xl lg:text-4xl text-black py-4 flex flex-col tracking-wider items-center lg:items-center"
+            className="text-4xl sm:text-4xl lg:text-4xl text-black py-4 flex flex-col tracking-wider items-center lg:items-start"
             style={{ fontFamily: "DarlineSerif, sans-serif" }}
           >
             PEOPLE MAGAZINE PRESENTS
-            <div className="text-center px-4">
+            <div className="text-center lg:text-left px-4">
               <h1
                 className="text-5xl sm:text-7xl text-red-700 leading-tight"
                 style={{ fontFamily: "DarlineScript, sans-serif" }}
@@ -66,20 +71,20 @@ function Spotlight2() {
               </h1>
             </div>
           </h2>
-          <p className="text-center sm:text-lg text-gray-700 mt-4">
+          <p className="text-center lg:text-left sm:text-lg text-gray-700 mt-4">
             The day was pure magic with{" "}
             <span className="text-red-700 font-bold">Summer K Makeup</span>,
             whose touch made everything feel effortlessly beautiful. Kamryn’s
             soft, radiant finish tied the whole look together — elegant, happy,
             and full of that just-married glow.
           </p>
-          <div className="text-center">
+          <div className="text-center lg:text-left">
             <Link
               href="https://people.com/chad-franke-utah-wedding-kamryn-anderson-photos-exclusive-11829229"
               target="_blank"
             >
               <Button
-                className={`mt-6 p-6 text-lg text-center rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
+                className={`mt-6 p-6 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
                 style={{ backgroundColor: "#b91c1c" }}
               >
                 See More!
@@ -89,13 +94,13 @@ function Spotlight2() {
         </div>
 
         {/* Right image */}
-        <div className="flex-shrink-0 w-full lg:w-auto mt-6 lg:mt-0">
+        <div className="flex-shrink-0" style={{ maxWidth: "450px", padding: "0 10px" }}>
           <Image
             src="/portfolio-2/spotlight2.jpg"
             alt="Summer Right"
             width={450}
             height={650}
-            className="rounded-lg object-cover shadow-xl w-full h-auto"
+            className="rounded-lg object-cover w-full h-auto shadow-xl"
           />
         </div>
       </div>

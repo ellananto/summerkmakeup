@@ -30,6 +30,7 @@ export function Gallery2() {
     "/portfolio/port10.jpg",
     "/portfolio/port13.jpg",
     "/portfolio/port11.jpg",
+    "/images/testim35.jpg"
   ];
 
   return (
