@@ -20,7 +20,7 @@ function MeetSummer() {
       <div className="flex-shrink-0 w-full lg:w-auto">
         <Image
           src="/images/meet.jpg"
-          alt="Summer Left"
+          alt="Summer K Makeup Left"
           width={450}
           height={650}
           className="rounded-lg object-cover shadow-xl w-full h-auto"
@@ -70,7 +70,7 @@ function MeetSummer() {
       <div className="flex-shrink-0 w-full lg:w-auto mt-6 lg:mt-0">
         <Image
           src="/images/meet-right.jpg"
-          alt="Summer Right"
+          alt="Summer K Makeup Right"
           width={450}
           height={650}
           className="rounded-lg object-cover shadow-xl w-full h-auto"

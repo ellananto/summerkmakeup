@@ -35,7 +35,7 @@ export function CarouselSize() {
       <div className="hidden md:block absolute left-10 -top-0 rotate-180 z-20">
         <Image
           src="/testimonials/heels2.png"
-          alt="Heels"
+          alt="Summer K Makeup Heels"
           width={200}
           height={200}
           className="object-cover"
@@ -46,7 +46,7 @@ export function CarouselSize() {
       <div className="md:hidden absolute inset-x-0 -top-0 flex justify-center z-20">
         <Image
           src="/testimonials/heels2.png"
-          alt="Heels"
+          alt="Summer K Makeup Heels"
           width={120}
           height={120}
           className="object-cover rotate-180"
@@ -57,7 +57,7 @@ export function CarouselSize() {
       <div className="hidden md:block absolute right-10 bottom-1 rotate-6 z-0">
         <Image
           src="/testimonials/lipmark.png"
-          alt="Lipmark"
+          alt="Summer K Makeup Lipmark"
           width={130}
           height={130}
           className="w-full h-full object-cover"
@@ -104,7 +104,7 @@ export function CarouselSize() {
                 <div className="flex justify-center">
                   <Image
                     src={src}
-                    alt={`testimonial ${index + 1}`}
+                    alt={`Summer K Makeup ${index + 1}`}
                     width={300}
                     height={300}
                     className="rounded-xl ml-4 max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain"
@@ -122,7 +122,7 @@ export function CarouselSize() {
       <div className="flex justify-center mt-10 md:hidden mb-8">
         <Image
           src="/testimonials/lipmark.png"
-          alt="Lipmark"
+          alt="Summer K Makeup Lipmark"
           width={80}
           height={80}
           className="object-cover ml-2"

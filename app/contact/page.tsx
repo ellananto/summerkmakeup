@@ -36,7 +36,7 @@ export default function PortfolioHero() {
         <motion.div style={{ y }} className="absolute inset-0">
           <Image
             src="/collage/shoot4.jpg"
-            alt="Portfolio Hero"
+            alt="Summer K Makeup Contact"
             fill
             style={{
               objectFit: "cover",

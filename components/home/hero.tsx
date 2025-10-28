@@ -37,7 +37,7 @@ function HeroLanding() {
         <Image
           key={i}
           src={src}
-          alt="makeup-landing"
+          alt="Summer K Makeup-makeup-landing"
           fill
           priority
           style={{

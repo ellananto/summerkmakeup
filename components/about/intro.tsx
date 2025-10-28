@@ -15,7 +15,7 @@ export function IntroAbout() {
       <div className="relative w-full h-[50vw] sm:h-[60vw] md:h-[80vh] lg:h-screen">
         <Image
           src="/images/aboutMe.jpg"
-          alt="About Me Postcard"
+          alt="Summer K Makeup About Me Postcard"
           fill
           priority
           style={{

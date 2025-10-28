@@ -55,7 +55,7 @@ export default function Spotlight() {
           >
             <Image
               src="/portfolio-2/spotlight1.jpg"
-              alt="Kamryn Franke"
+              alt="Kamryn Franke 1"
               width={400}
               height={500}
               className="object-cover shadow-md w-full h-auto cursor-pointer"

@@ -41,7 +41,7 @@ function Spotlight2() {
         <div className="flex-shrink-0" style={{ maxWidth: "450px", padding: "0 10px" }}>
           <Image
             src="/portfolio-2/spotlight1.jpg"
-            alt="Summer Left"
+            alt="Summer K Makeup Left"
             width={450}
             height={650}
             className="rounded-lg object-cover w-full h-auto shadow-xl"
@@ -96,7 +96,7 @@ function Spotlight2() {
         <div className="flex-shrink-0" style={{ maxWidth: "450px", padding: "0 10px" }}>
           <Image
             src="/portfolio-2/spotlight2.jpg"
-            alt="Summer Right"
+            alt="Summer K Makeup Right"
             width={450}
             height={650}
             className="rounded-lg object-cover w-full h-auto shadow-xl"

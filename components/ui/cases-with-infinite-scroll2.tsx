@@ -51,7 +51,7 @@ function Case2({ images }: CaseProps) {
                 <div className="w-[200px] sm:w-[300px] lg:w-[350px] h-[250px] sm:h-[350px] lg:h-[400px] mx-auto rounded-md overflow-hidden bg-muted relative flex items-center justify-center">
                   <Image
                     src={src}
-                    alt={`Portfolio ${index + 1}`}
+                    alt={`Summer K Makeup Portfolio ${index + 1}`}
                     fill
                     sizes="(max-width: 640px) 200px, (max-width: 1024px) 300px, 350px"
                     className="object-cover"

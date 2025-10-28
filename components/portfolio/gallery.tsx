@@ -75,7 +75,7 @@ export function Gallery() {
                 <div className="w-full aspect-square">
                   <Image
                     src={src}
-                    alt={`testimonial ${index + 1}`}
+                    alt={`Summer K Makeup ${index + 1}`}
                     width={300}
                     height={300}
                     className="rounded-xl w-full h-full object-cover"
@@ -99,7 +99,7 @@ export function Gallery() {
                 <div className="w-full aspect-square">
                   <Image
                     src={src}
-                    alt={`testimonial ${index + 1}`}
+                    alt={`Summer K Makeup ${index + 1}`}
                     width={300}
                     height={300}
                     className="rounded-xl w-full h-full object-cover"

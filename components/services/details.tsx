@@ -24,7 +24,7 @@ export default function Details() {
           <div className="w-[325px] sm:w-[375px] md:w-[350px] max-w-full">
             <Image
               src="/collage/shoot3.jpg"
-              alt="Static Right"
+              alt="Summer K Makeup Right"
               width={400}
               height={400}
               className="object-cover w-full h-auto border-2 border-black"

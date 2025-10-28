@@ -79,7 +79,7 @@ export function Intro() {
         >
           <Image
             src="/collage/shoot2.jpg"
-            alt="Makeup session"
+            alt="Summer K Makeup Shoot2"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
             priority

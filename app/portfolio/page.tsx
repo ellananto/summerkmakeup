@@ -29,7 +29,7 @@ export default function Portfolio() {
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
             src="/images/brush-polaroids.jpg"
-            alt="Portfolio Hero"
+            alt="Summer K Makeup Portfolio"
             fill
             priority
             style={{

@@ -38,7 +38,7 @@ export default function Socials() {
       {/* Background image */}
       <Image
         src="/images/socials.jpg"
-        alt="Socials Banner"
+        alt="Summer K Makeup Socials Banner"
         fill
         className="object-cover"
         priority

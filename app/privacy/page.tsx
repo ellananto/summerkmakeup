@@ -25,7 +25,7 @@ export default function Privacy() {
         <motion.div style={{ y }} className="absolute inset-0">
           <Image
             src="/images/privacy.jpg"
-            alt="Privacy Hero"
+            alt="Summer K Makeup Privacy"
             fill
             style={{
               objectFit: "cover",

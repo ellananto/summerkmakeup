@@ -21,7 +21,7 @@ export default function AboutHero() {
         <div className="relative w-full h-[70vw] sm:h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden">
           <Image
             src="/images/Portfolio (11).jpg"
-            alt="Portfolio Hero"
+            alt="Summer K Makeup About"
             fill
             priority
             style={{

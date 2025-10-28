@@ -14,7 +14,7 @@ export function PictureAbout() {
     <div className="relative w-full h-[60vw] sm:h-[50vh] md:h-[70vh] lg:h-screen overflow-hidden pb-20 mb-20">
       <Image
         src="/images/picAboutMe.jpg"
-        alt="About Me"
+        alt="Summer K Makeup Picture About"
         fill
         priority
         style={{

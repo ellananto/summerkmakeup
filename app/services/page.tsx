@@ -25,7 +25,7 @@ export default function ServicesSplit() {
           <motion.div style={{ y }} className="w-full h-full">
             <Image
               src="/portfolio/servphot.jpg"
-              alt="Services Hero"
+              alt="Summer K Makeup Services"
               fill
               style={{
                 objectFit: "cover",
