@@ -13,7 +13,8 @@ const montserrat = Montserrat({
 function MeetSummer() {
   return (
     <div
-      className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center px-10 sm:px-20 lg:px-20 py-16 lg:py-20 gap-8 overflow-x-hidden`}
+      className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-16 lg:py-20 gap-8 overflow-x-hidden`}
+      style={{ paddingLeft: "10px", paddingRight: "10px" }} // 10px space on each side
     >
       {/* Top image on mobile / left image on desktop */}
       <div className="flex-shrink-0 w-full lg:w-auto">
@@ -27,14 +28,14 @@ function MeetSummer() {
       </div>
 
       {/* Center text */}
-      <div className="flex-1 w-full text-center lg:text-left px-2 sm:px-4">
+      <div className="flex-1 w-full text-center px-2 sm:px-4">
         <h2
-          className="text-4xl text-center sm:text-5xl lg:text-6xl font-light py-4 flex flex-col tracking-wider items-center lg:items-center"
+          className="text-4xl sm:text-5xl lg:text-6xl font-light py-4 flex flex-col tracking-wider items-center"
           style={{ fontFamily: "DarlineSerif, sans-serif" }}
         >
           Meet{" "}
           <span
-            className="text-red-700 text-center text-8xl sm:text-8xl lg:text-9xl pt-3 lg:pt-5"
+            className="text-red-700 text-8xl sm:text-8xl lg:text-9xl pt-3 lg:pt-5"
             style={{
               display: "inline-block",
               fontFamily: "DarlineScript, sans-serif",

@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 function Spotlight2() {
   return (
-    <div className="py-20 px-2 lg:px-0">
+    <div className="py-20" style={{ paddingLeft: "10px", paddingRight: "10px" }}>
       {/* Title */}
       <div className="flex items-center justify-center flex-wrap text-center mb-6">
         <div className="w-12 sm:w-16 h-[1px] bg-red-700"></div>
@@ -35,8 +35,7 @@ function Spotlight2() {
 
       {/* Spotlight Section */}
       <div
-        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 gap-8`}
-        style={{ paddingLeft: "10px", paddingRight: "10px" }} // ensures 10px space on each side
+        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 gap-8 overflow-x-hidden`}
       >
         {/* Left image */}
         <div className="flex-shrink-0" style={{ maxWidth: "450px", padding: "0 10px" }}>
@@ -49,14 +48,14 @@ function Spotlight2() {
           />
         </div>
 
-        {/* Center text */}
-        <div className="flex-1 text-center lg:text-left px-2 sm:px-4">
+        {/* Center text (always centered) */}
+        <div className="flex-1 text-center px-2 sm:px-4">
           <h2
-            className="text-4xl sm:text-4xl lg:text-4xl text-black py-4 flex flex-col tracking-wider items-center lg:items-start"
+            className="text-4xl sm:text-4xl lg:text-4xl text-black py-4 flex flex-col tracking-wider items-center"
             style={{ fontFamily: "DarlineSerif, sans-serif" }}
           >
             PEOPLE MAGAZINE PRESENTS
-            <div className="text-center lg:text-left px-4">
+            <div className="px-4 mt-2">
               <h1
                 className="text-5xl sm:text-7xl text-red-700 leading-tight"
                 style={{ fontFamily: "DarlineScript, sans-serif" }}
@@ -71,20 +70,20 @@ function Spotlight2() {
               </h1>
             </div>
           </h2>
-          <p className="text-center lg:text-left sm:text-lg text-gray-700 mt-4">
+          <p className="text-center sm:text-lg text-gray-700 mt-4">
             The day was pure magic with{" "}
             <span className="text-red-700 font-bold">Summer K Makeup</span>,
             whose touch made everything feel effortlessly beautiful. Kamryn’s
             soft, radiant finish tied the whole look together — elegant, happy,
             and full of that just-married glow.
           </p>
-          <div className="text-center lg:text-left">
+          <div className="mt-6 text-center">
             <Link
               href="https://people.com/chad-franke-utah-wedding-kamryn-anderson-photos-exclusive-11829229"
               target="_blank"
             >
               <Button
-                className={`mt-6 p-6 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
+                className={`p-6 text-lg rounded-lg drop-shadow-md cursor-pointer hover:scale-105 transition-transform duration-300 font-medium ${montserrat.className}`}
                 style={{ backgroundColor: "#b91c1c" }}
               >
                 See More!
