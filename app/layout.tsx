@@ -13,17 +13,23 @@ const onest = Onest({
 
 export const metadata: Metadata = {
   title: "Summer K Makeup | Summer Kallunki",
-  description: "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+  description:
+    "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
   openGraph: {
     title: "Summer K Makeup | Summer Kallunki",
-    description: "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+    description:
+      "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
     url: "https://summerkmakeup.com",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Summer K Makeup | Summer Kallunki",
-    description: "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+    description:
+      "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+  },
+  icons: {
+    icon: "/favicon.png",
   },
 };
 
@@ -34,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={onest.className}>
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body
         className={`${onest.variable} antialiased min-h-screen flex flex-col`}
         style={{ backgroundColor: "#FFCCDD" }}
