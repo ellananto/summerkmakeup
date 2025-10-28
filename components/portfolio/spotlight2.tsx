@@ -31,7 +31,7 @@ function Spotlight2() {
       </p>
 
       <div
-        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 lg:py-10 gap-8`}
+        className={`${montserrat.className} flex flex-col lg:flex-row items-center justify-center py-10 lg:py-10 gap-8 px-[10px]`}
       >
         {/* Left image */}
         <div className="flex-shrink-0 w-full lg:w-auto">
