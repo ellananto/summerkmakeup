@@ -12,9 +12,19 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
-  title: "Summer Kallunki | Utah Makeup Artist",
-  description:
-    "Summer Kallunki is a Utah-based makeup artist specializing in bridal, special events, and photoshoots.",
+  title: "Summer K Makeup | Summer Kallunki",
+  description: "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+  openGraph: {
+    title: "Summer K Makeup | Summer Kallunki",
+    description: "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+    url: "https://summerkmakeup.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Summer K Makeup | Summer Kallunki",
+    description: "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+  },
 };
 
 export default function RootLayout({
