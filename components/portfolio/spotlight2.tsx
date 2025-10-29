@@ -20,7 +20,7 @@ function Spotlight2() {
           className="mx-4 text-4xl sm:text-6xl lg:text-7xl text-red-700 mt-2 sm:mt-0"
           style={{ fontFamily: "DarlineScript, sans-serif" }}
         >
-          Client Spotlight
+          Published Work
         </h2>
         <div className="w-12 sm:w-16 h-[1px] bg-red-700"></div>
       </div>
@@ -29,8 +29,7 @@ function Spotlight2() {
       <p
         className={`mt-4 sm:mt-6 text-center text-red-600 text-base sm:text-lg lg:text-xl font-light leading-relaxed ${montserrat.className}`}
       >
-        We’re over the MOON to have Summer K Makeup featured in People Magazine.
-        Read below to see the perfect look for our bride&apos;s perfect day!
+        As featured in People's Magazine, a classic bridal makeup look by Summer K Makeup on Kamryn Franke!
       </p>
 
       {/* Spotlight Section */}

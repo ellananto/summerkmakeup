@@ -19,6 +19,7 @@ const montserrat = Montserrat({
 
 export function CarouselSize() {
   const testimonialImages = [
+    "/testimonials/t14.png",
     "/testimonials/t1.png",
     "/testimonials/t3.png",
     "/testimonials/t2.png",
@@ -27,6 +28,13 @@ export function CarouselSize() {
     "/testimonials/t6.png",
     "/testimonials/t7.png",
     "/testimonials/t8.png",
+    "/testimonials/t9.png",
+    "/testimonials/t10.png",
+    "/testimonials/t11.png",
+    "/testimonials/t12.png",
+    "/testimonials/t13.png",
+    "/testimonials/t15.png",
+    "/testimonials/t16.png",
   ];
 
   return (
