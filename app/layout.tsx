@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Summer K Makeup | Summer Kallunki",
     description:
-      "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+      "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials, by SummerKMakeup.",
     url: "https://summerkmakeup.com",
     type: "website",
   },
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Summer K Makeup | Summer Kallunki",
     description:
-      "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials.",
+      "Makeup Artist located in Utah for bridals, wedding party makeup, and editorials, by SummerKMakeup.",
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 
@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={onest.className}>
       <head>
-        <link rel="icon" href="/favicon.ico" type="image/png" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32"/>
       </head>
       <body
         className={`${onest.variable} antialiased min-h-screen flex flex-col`}
