@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={onest.className}>
       <head>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" type="image/png" />
       </head>
       <body
         className={`${onest.variable} antialiased min-h-screen flex flex-col`}
