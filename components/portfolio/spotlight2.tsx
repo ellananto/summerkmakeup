@@ -29,7 +29,7 @@ function Spotlight2() {
       <p
         className={`mt-4 sm:mt-6 text-center text-red-600 text-base sm:text-lg lg:text-xl font-light leading-relaxed ${montserrat.className}`}
       >
-        As featured in People's Magazine, a classic bridal makeup look by Summer K Makeup on Kamryn Franke!
+        As featured in People&apos;s Magazine, a classic bridal makeup look by Summer K Makeup on Kamryn Franke!
       </p>
 
       {/* Spotlight Section */}

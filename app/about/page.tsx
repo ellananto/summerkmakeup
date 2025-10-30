@@ -4,7 +4,6 @@ import { IntroAbout } from "@/components/about/intro";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import Socials from "@/components/home/socials";
-import { PictureAbout } from "@/components/about/journal";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
