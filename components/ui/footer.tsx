@@ -83,7 +83,7 @@ export function Footer() {
           {/* Center text */}
           <div className="flex flex-col items-center justify-center space-y-2 mt-12 text-center">
             <h1
-              className={`text-4xl sm:text-6xl md:text-8xl font-bold italicbreak-words`}
+              className={`text-4xl sm:text-6xl md:text-8xl italicbreak-words`}
               style={{ color: "#FFADCA", fontFamily: "DarlineScript, sans-serif" }}
             >
               Summer K&nbsp;&nbsp;Makeup
