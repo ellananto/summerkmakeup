@@ -61,9 +61,6 @@ export function Footer() {
                 <Link href="https://www.instagram.com/summerkmakeup/" target="_blank">
                   <li className="fh-items">Instagram</li>
                 </Link>
-                <Link href="https://www.tiktok.com/@sumshine7" target="_blank">
-                  <li className="fh-items">Tik Tok</li>
-                </Link>
               </ul>
             </div>
 
