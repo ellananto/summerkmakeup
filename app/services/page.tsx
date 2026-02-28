@@ -48,7 +48,7 @@ export default function ServicesSplit() {
             className="text-5xl md:text-[12rem] font-bold text-white drop-shadow-lg"
             style={{ fontFamily: "DarlineSerif, sans-serif" }}
           >
-            Services + Pricing
+            Services + Details
           </h1>
         </div>
       </div>

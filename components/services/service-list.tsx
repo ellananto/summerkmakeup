@@ -57,7 +57,7 @@ export default function ServiceList() {
                 className="text-4xl py-5 tracking-wider font-bold"
                 style={{ fontFamily: "DarlineSerif, sans-serif" }}
               >
-                General Event Makeup - $125
+                General Event Makeup
               </h1>
               <ul className="text-lg">
                 <li className="mb-2 flex items-center gap-2">
@@ -94,7 +94,7 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Wedding Day - $140
+                      Wedding Day
                     </h1>
                     <ul className=" text-lg">
                       <li className="mb-2 flex items-center gap-2">
@@ -103,7 +103,7 @@ export default function ServiceList() {
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $50 deposit
+                        Requires deposit
                       </li>
                     </ul>
                   </div>
@@ -112,7 +112,7 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Wedding Day & Trial - $270
+                      Wedding Day & Trial
                     </h1>
                     <ul className=" text-lg">
                       <li className="mb-2 flex items-center gap-2">
@@ -121,7 +121,7 @@ export default function ServiceList() {
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $100 deposit
+                        Requires deposit
                       </li>
                     </ul>
                   </div>
@@ -130,7 +130,7 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Additional Bridal Sessions - $135
+                      Additional Bridal Sessions
                     </h1>
                     <ul className=" text-lg">
                       <li className="mb-2 flex items-center gap-2">
@@ -139,7 +139,7 @@ export default function ServiceList() {
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $50 deposit
+                        Requires deposit
                       </li>
                     </ul>
                   </div>
@@ -170,7 +170,7 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Bridal Party - $110
+                      Bridal Party 
                     </h1>
                     <ul className="text-lg">
                       <li className="mb-2 flex items-center gap-2">
@@ -179,7 +179,7 @@ export default function ServiceList() {
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $50 deposit
+                        Requires deposit
                       </li>
                     </ul>
                   </div>
@@ -188,7 +188,7 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Junior Bridesmaid - $65
+                      Junior Bridesmaid
                     </h1>
                     <ul className="text-lg">
                       <li className="mb-2 flex items-center gap-2">
@@ -197,7 +197,7 @@ export default function ServiceList() {
                       </li>
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $30 deposit
+                        Requires deposit
                       </li>
                     </ul>
                   </div>
@@ -206,12 +206,12 @@ export default function ServiceList() {
                       className="text-4xl py-5 tracking-wider font-bold"
                       style={{ fontFamily: "DarlineSerif, sans-serif" }}
                     >
-                      Flower Girl - $25
+                      Flower Girl 
                     </h1>
                     <ul className="text-lg">
                       <li className="mb-2 flex items-center gap-2">
                         <BookHeart />
-                        Requires a $10 deposit
+                        Requires deposit
                       </li>
                     </ul>
                   </div>
@@ -269,7 +269,7 @@ export default function ServiceList() {
                   className="text-4xl py-5 tracking-wider font-bold"
                   style={{ fontFamily: "DarlineSerif, sans-serif" }}
                 >
-                  One on One Lessons - $175
+                  One on One Lessons - $200
                 </h1>
                 <ul className=" text-lg">
                   <li className="mb-2 flex items-center gap-2">
